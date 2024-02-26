@@ -1,0 +1,3542 @@
+<!DOCTYPE html>
+<html amp lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Casino X</title>
+	<script async src="https://cdn.ampproject.org/v0.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="canonical" href="index.html">
+	<style amp-custom>
+		:root {
+			--main-bg-color: #fff;
+			--main-text-color: #1a1a1b;
+			--main-content-background: #fff;
+			--header-top-bg: #202021;
+			/*--header-bottom-bg: #1a1a1b;*/
+			--menu-links-color: #fff;
+			--text-links-color: #35a4f0;
+			--text-links-hover-color: #69c1ff;
+			--reg-button-background: #18b739;
+			--login-button-background: #35a4f0;
+			--sb-title-background: #00ab22;
+			--sb-title-color: #fff;
+
+			--main-green-color: #00ab22;
+			--main-red-color: #d50000;
+
+			--footer-main-bg: #202021;
+			--footer-secondary-bg: #202021;
+			--footer-text-color: #fff;
+		}
+
+
+		.games-list-hover,
+		article,
+		aside,
+		details,
+		figure,
+		footer,
+		header,
+		nav,
+		section,
+		summary {
+			display: block
+		}
+
+		audio,
+		canvas,
+		video {
+			display: inline-block
+		}
+
+		audio:not([controls]) {
+			display: none;
+			height: 0
+		}
+
+		[hidden] {
+			display: none
+		}
+
+		html {
+			font-family: sans-serif;
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			background-color: #f5f5f5;
+			min-width: 320px;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			font-size: 10px;
+			text-rendering: optimizeLegibility;
+			-webkit-text-size-adjust: 100%;
+			-moz-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			text-size-adjust: 100%
+		}
+
+		a:focus {
+			outline: thin dotted
+		}
+
+		a:active,
+		a:hover {
+			outline: 0
+		}
+
+		h1 {
+			font-size: 2em
+		}
+
+		abbr[title] {
+			border-bottom: 1px dotted
+		}
+
+		b,
+		strong {
+			font-weight: 700
+		}
+
+		dfn {
+			font-style: italic
+		}
+
+		hr {
+			-moz-box-sizing: content-box;
+			box-sizing: content-box;
+			height: 0
+		}
+
+		mark {
+			background: #ff0;
+			color: #000
+		}
+
+		code,
+		kbd,
+		pre,
+		samp {
+			font-family: monospace, serif;
+			font-size: 1em
+		}
+
+		pre {
+			white-space: pre-wrap
+		}
+
+		small {
+			font-size: 80%
+		}
+
+		sub,
+		sup {
+			font-size: 75%;
+			line-height: 0;
+			position: relative;
+			vertical-align: baseline
+		}
+
+		sup {
+			top: -.5em
+		}
+
+		sub {
+			bottom: -.25em
+		}
+
+		img {
+			border: 0;
+			max-width: 100%;
+			height: auto
+		}
+
+		svg:not(:root) {
+			overflow: hidden
+		}
+
+		fieldset {
+			border: 1px solid silver;
+			margin: 0 2px;
+			padding: .35em .625em .75em
+		}
+
+		button,
+		input,
+		select,
+		textarea {
+			font-family: inherit;
+			font-size: 100%;
+			margin: 0
+		}
+
+		button,
+		input {
+			line-height: normal
+		}
+
+		button,
+		select {
+			text-transform: none
+		}
+
+		button,
+		html input[type=button],
+		input[type=reset],
+		input[type=submit] {
+			-webkit-appearance: button;
+			cursor: pointer
+		}
+
+		button[disabled],
+		html input[disabled] {
+			cursor: default
+		}
+
+		input[type=checkbox],
+		input[type=radio] {
+			box-sizing: border-box;
+			padding: 0
+		}
+
+		input[type=search] {
+			-webkit-appearance: textfield;
+			-moz-box-sizing: content-box;
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box
+		}
+
+		input[type=search]::-webkit-search-cancel-button,
+		input[type=search]::-webkit-search-decoration {
+			-webkit-appearance: none
+		}
+
+		textarea {
+			overflow: auto;
+			vertical-align: top
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		.email-popup__form .hidden-input p,
+		.reg_popup__form .hidden-input p,
+		figure {
+			margin: 0
+		}
+
+		button::-moz-focus-inner,
+		input::-moz-focus-inner,
+		legend {
+			border: 0;
+			padding: 0
+		}
+
+		*,
+		::after,
+		::before {
+			box-sizing: border-box
+		}
+
+		::selection {
+			background: #12cca6;
+			color: #000
+		}
+
+		:root {
+			--site-color-1: brown
+		}
+
+		body::-webkit-scrollbar,
+		html::-webkit-scrollbar {
+			width: 14px;
+			height: 14px
+		}
+
+		body::-webkit-scrollbar-track,
+		html::-webkit-scrollbar-track {
+			-webkit-box-shadow: none;
+			background: var(--main-bg-color)
+		}
+
+		body::-webkit-scrollbar-thumb,
+		html::-webkit-scrollbar-thumb {
+			border-radius: 7px;
+			background-color: var(--main-content-background);
+			outline: 0
+		}
+
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, Arial, Segoe UI, Roboto, Helvetica Neue, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+			color: var(--main-text-color);
+			background-color: var(--main-bg-color);
+			overflow: hidden;
+			font-size: 1.6rem;
+			line-height: 1.5em;
+			min-height: 100vh
+		}
+
+		body,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		html,
+		p {
+			margin: 0;
+			padding: 0
+		}
+
+		body.logged-in .lgb1-header {
+			top: 92px
+		}
+
+		body.logged-in .lgb1-header__top {
+			top: 32px
+		}
+
+		body.logged-in .single-casino__fixed-bar {
+			top: 92px
+		}
+
+		.intext-btn-link,
+		a {
+			text-decoration: none;
+			color: var(--text-links-color);
+			-webkit-transition: all ease-out .2s;
+			-moz-transition: all ease-out .2s;
+			-o-transition: all ease-out .2s;
+			transition: all ease-out .2s
+		}
+
+		.intext-btn-link:hover,
+		a:hover {
+			color: var(--text-links-hover-color)
+		}
+
+		.intext-btn-link {
+			display: inline-block;
+			outline: 0;
+			padding: 0;
+			margin: 0;
+			background: 0 0;
+			border: 0
+		}
+
+		.js-ref-btn {
+			cursor: pointer
+		}
+
+		.container {
+			max-width: 1240px;
+			width: 100%;
+			margin: 0 auto;
+			position: relative
+		}
+
+		@media (max-width:1239px) {
+			.container {
+				padding: 0 20px
+			}
+		}
+
+		.aligncenter {
+			margin: 15px auto;
+			display: block
+		}
+
+		.alignleft {
+			float: left;
+			margin: 15px 25px 15px 0
+		}
+
+		.alignright {
+			float: right;
+			margin: 15px 0 15px 25px
+		}
+
+		.toc-wrapper {
+			width: 100%;
+			max-width: 320px
+		}
+
+		@media (max-width:767px) {
+			.toc-wrapper {
+				max-width: 100%
+			}
+		}
+
+		.toc-wrapper.alignleft {
+			margin: .2em 25px 10px 0
+		}
+
+		.toc-wrapper .lwptoc {
+			margin-top: 0;
+			margin-bottom: 0
+		}
+
+		.toc-wrapper .lwptoc.lwptoc-light .lwptoc_i {
+			background: rgba(0, 0, 0, .04)
+		}
+
+		.toc-wrapper .lwptoc_title {
+			font-size: 1.8rem
+		}
+
+		.toc-wrapper .lwptoc.lwptoc-left {
+			margin: .2em 25px .5em 0
+		}
+
+		.toc-wrapper .lwptoc_i {
+			width: 100%;
+			border-radius: 5px;
+			background: var(--main-bg-color)
+		}
+
+		.toc-wrapper .lwptoc_i .lwptoc_item {
+			margin: 5px 0
+		}
+
+		.text-block h1,
+		.text-block h2,
+		.text-block h3,
+		.text-block h4,
+		.text-block h5,
+		.text-block p {
+			margin: .7em 0
+		}
+
+		.text-block h1,
+		.text-block h2,
+		.text-block h3,
+		.text-block h4,
+		.text-block h5 {
+			font-size: 2.8rem;
+			padding-bottom: .3em;
+			border-bottom: 1px solid var(--main-text-color)
+		}
+
+		.text-block h2,
+		.text-block h3,
+		.text-block h4,
+		.text-block h5 {
+			font-size: 2.4rem
+		}
+
+		.text-block h3,
+		.text-block h4,
+		.text-block h5 {
+			font-size: 2rem
+		}
+
+		.text-block h4,
+		.text-block h5 {
+			font-size: 1.8rem
+		}
+
+		.text-block h5 {
+			font-size: 1.6rem
+		}
+
+		.text-block a:hover {
+			text-decoration: underline
+		}
+
+		.text-block table {
+			border-collapse: collapse
+		}
+
+		.text-block table tr:nth-child(odd) {
+			background: rgba(0, 0, 0, .04)
+		}
+
+		.text-block table tr th {
+			font-size: 1.4rem;
+			font-weight: 700;
+			background: var(--header-top-bg);
+			color: var(--menu-links-color)
+		}
+
+		.text-block table tr td,
+		.text-block table tr th {
+			min-width: 100px;
+			padding: 7px 10px;
+			border: 1px solid var(--main-text-color)
+		}
+
+		.text-block .table-wrapper {
+			overflow-x: auto;
+			padding-bottom: 10px;
+			padding-right: 5px;
+			margin: .2em 0
+		}
+
+		.text-block .table-wrapper::-webkit-scrollbar {
+			width: 14px;
+			height: 14px
+		}
+
+		.text-block .table-wrapper::-webkit-scrollbar-track {
+			-webkit-box-shadow: none;
+			background: var(--main-content-background)
+		}
+
+		.text-block .table-wrapper::-webkit-scrollbar-thumb {
+			border-radius: 7px;
+			background-color: var(--header-top-bg);
+			outline: 0
+		}
+
+		@media (max-width:767px) {
+			.text-block .table-wrapper {
+				clear: both
+			}
+		}
+
+		.lgb1-header {
+			padding: 60px 0 0;
+			z-index: 150;
+			position: relative
+		}
+
+		.lgb1-header__top,
+		.lgb1-header__top:after {
+			left: 0;
+			right: 0;
+			background-color: var(--header-top-bg)
+		}
+
+		.lgb1-header__top {
+			width: 100%;
+			height: 60px;
+			position: fixed;
+			top: 0;
+			z-index: 1000
+		}
+
+		.lgb1-header__top:after {
+			content: "";
+			position: absolute;
+			top: 60px;
+			height: 5px;
+			filter: brightness(.4)
+		}
+
+		.lgb1-header__top-container {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start
+		}
+
+		@media (max-width:1239px) {
+			.lgb1-header__top-container {
+				padding: 0 20px
+			}
+		}
+
+		.lgb1-header__top-logo {
+			font-size: 3rem;
+			font-weight: 900;
+			line-height: 60px;
+			position: relative;
+			z-index: 1000;
+			justify-content: flex-start
+		}
+
+		.lgb1-header__top-logo,
+		.lgb1-header__top-logo:hover {
+			color: var(--main-text-color)
+		}
+
+		.lgb1-header__top-logo img {
+			margin: 0;
+			display: block;
+			max-height: 50px
+		}
+
+		.lgb1-header__btns,
+		.lgb1-header__top-logo {
+			height: 60px;
+			display: flex;
+			align-items: center
+		}
+
+		.lgb1-header__btns .button--reg {
+			margin: 0 10px 0 0
+		}
+
+		@media (max-width:575px) {
+			.lgb1-header__btns .button--reg {
+				margin: 0 0 0 10px
+			}
+
+			.lgb1-header__btns .button--login {
+				display: none
+			}
+		}
+
+		.lgb1-header__slider img {
+			display: block;
+			margin: 0 auto;
+			max-width: 100vw
+		}
+
+		.menu-button,
+		.menu-button span {
+			position: absolute;
+			-webkit-transition: all ease-out .2s;
+			-moz-transition: all ease-out .2s;
+			-o-transition: all ease-out .2s;
+			transition: all ease-out .2s
+		}
+
+		.menu-button {
+			width: 36px;
+			min-width: 36px;
+			max-width: 36px;
+			height: 32px;
+			top: 10px;
+			right: 20px;
+			cursor: pointer;
+			outline: 0;
+			display: none;
+			background: 0 0;
+			padding: 0;
+			border: 0;
+			z-index: 1000
+		}
+
+		@media (max-width:991px) {
+			.menu-button {
+				display: block
+			}
+		}
+
+		@media (max-width:575px) {
+			.menu-button {
+				margin-left: 0
+			}
+		}
+
+		.menu-button span {
+			left: 0;
+			right: 0;
+			height: 3px;
+			background: var(--menu-links-color);
+			border-radius: 2px;
+			opacity: .8
+		}
+
+		.menu-button span:first-child {
+			top: 7px
+		}
+
+		.menu-button span:nth-child(2) {
+			top: 18px
+		}
+
+		.menu-button span:nth-child(3) {
+			bottom: 0
+		}
+
+		.menu-button.active {
+			z-index: 9999
+		}
+
+		.menu-button.active span:first-child {
+			width: 40px;
+			top: 18px;
+			left: 2px;
+			-moz-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+			-webkit-transform: rotate(-45deg)
+		}
+
+		.menu-button.active span:nth-child(2) {
+			opacity: 0
+		}
+
+		.menu-button.active span:nth-child(3) {
+			width: 40px;
+			top: 18px;
+			left: 2px;
+			-moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			-webkit-transform: rotate(45deg)
+		}
+
+		.menu-button:hover span,
+		.sidebar__now-playing-list-item:hover .sidebar__now-playing-list-item-right:after,
+		.sidebar__now-playing-list-item:hover .sidebar__now-playing-list-item-right:before {
+			opacity: 1
+		}
+
+		.lgb1-main {
+			padding: 20px 0;
+			position: relative
+		}
+
+		.section-with-sb {
+			display: flex;
+			justify-content: space-between
+		}
+
+		@media (max-width:991px) {
+			.section-with-sb {
+				flex-direction: column
+			}
+		}
+
+		.section-with-sb__left {
+			flex: 2 920px;
+			max-width: 920px;
+			padding: 0;
+			margin-right: 20px;
+			box-sizing: border-box
+		}
+
+		@media (max-width:1239px) {
+			.section-with-sb__left {
+				max-width: calc(100vw - 340px)
+			}
+		}
+
+		@media (max-width:991px) {
+			.section-with-sb__left {
+				max-width: 100%;
+				margin-right: 0;
+				margin-bottom: 20px
+			}
+		}
+
+		@media (max-width:575px) {
+			.section-with-sb__left {
+				flex: 2 320px
+			}
+		}
+
+		.section-with-sb__right {
+			flex: 1 300px;
+			width: 300px;
+			position: relative;
+			z-index: 100
+		}
+
+		@media (max-width:991px) {
+			.section-with-sb__right {
+				width: 100%
+			}
+		}
+
+		.content-article {
+			background: var(--main-content-background);
+			padding: 15px 0;
+			border-radius: 5px
+		}
+
+		.single-casino__toc-wrapper {
+			background: var(--main-bg-color);
+			border-radius: 5px;
+			padding: 15px
+		}
+
+		.single-casino__toc-wrapper.toc-wrapper .lwptoc_i {
+			padding: 15px 0;
+			background: 0 0
+		}
+
+		.single-casino__thumb-holder {
+			min-height: 150px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			padding: 20px;
+			background: var(--main-content-background);
+			border: 0;
+			outline: 0;
+			margin: 0 auto;
+			border-radius: 5px
+		}
+
+		.single-casino__thumb-holder img {
+			display: block;
+			border-radius: 5px
+		}
+
+		.single-casino__default-bonus {
+			padding: 0;
+			margin: 15px auto 0;
+			text-align: center;
+			background: 0 0;
+			border: 0;
+			outline: 0;
+			width: 100%;
+			box-sizing: border-box
+		}
+
+		.single-casino__default-bonus-value {
+			font-weight: 700
+		}
+
+		.single-casino__default-bonus label {
+			font-size: 1.4rem;
+			font-weight: 500;
+			opacity: .8;
+			display: block;
+			color: var(--sb-title-color)
+		}
+
+		.single-casino__big-btn.button {
+			margin: 10px auto;
+			display: block;
+			width: 100%;
+			max-width: 280px;
+			font-size: 2.2rem
+		}
+
+		@media (max-width:767px) {
+			.single-casino__big-btn.button {
+				margin: 10px auto
+			}
+		}
+
+		.single-casino__fixed-bar {
+			position: fixed;
+			top: 60px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			width: 100%;
+			z-index: 200;
+			max-width: 1240px;
+			padding-right: 320px;
+			transform: translateY(-200px);
+			-webkit-transition: all ease-out .4s;
+			-moz-transition: all ease-out .4s;
+			-o-transition: all ease-out .4s;
+			transition: all ease-out .4s
+		}
+
+		@media (max-width:991px) {
+			.single-casino__fixed-bar {
+				padding-right: 0;
+				top: unset;
+				bottom: 0;
+				transform: translateY(200px)
+			}
+		}
+
+		.single-casino__fixed-bar.visible {
+			transform: translateY(0)
+		}
+
+		.single-casino__fixed-bar-inner {
+			padding: 7px 20px;
+			border-radius: 0 0 15px 15px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background: var(--main-content-background);
+			-webkit-box-shadow: 0 4px 14px -5px rgba(0, 0, 0, .75);
+			-moz-box-shadow: 0 4px 14px -5px rgba(0, 0, 0, .75);
+			box-shadow: 0 4px 14px -5px rgba(0, 0, 0, .75)
+		}
+
+		@media (max-width:991px) {
+			.single-casino__fixed-bar-inner {
+				border-radius: 15px 15px 0 0
+			}
+		}
+
+		.single-casino__fixed-bar-left {
+			padding: 0 20px 0 0;
+			min-width: 150px;
+			box-sizing: border-box
+		}
+
+		@media (max-width:767px) {
+			.single-casino__fixed-bar-left {
+				min-width: 120px
+			}
+		}
+
+		@media (max-width:575px) {
+			.single-casino__fixed-bar-left {
+				width: 50%;
+				min-width: unset;
+				padding-right: 10px
+			}
+		}
+
+		.single-casino__fixed-bar-left button,
+		.single-casino__fixed-bar-middle button {
+			background: 0 0;
+			outline: 0;
+			padding: 0;
+			border: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center
+		}
+
+		.single-casino__fixed-bar-middle {
+			padding: 0 15px;
+			font-size: 2.4rem;
+			font-weight: 700;
+			flex: 1;
+			text-align: center;
+			border-left: 2px solid rgba(0, 0, 0, .1);
+			border-right: 2px solid rgba(0, 0, 0, .1)
+		}
+
+		@media (max-width:575px) {
+			.single-casino__fixed-bar-middle {
+				display: none
+			}
+		}
+
+		.single-casino__fixed-bar-middle label {
+			font-size: 1.2rem;
+			opacity: .6;
+			display: block;
+			line-height: 1em;
+			margin-bottom: 3px
+		}
+
+		.single-casino__fixed-bar-middle button {
+			text-align: center;
+			width: 100%;
+			font-weight: 700;
+			color: var(--main-green-color)
+		}
+
+		.single-casino__fixed-bar-right {
+			padding: 0 0 0 20px;
+			font-size: 2rem;
+			font-weight: 700;
+			min-width: 170px
+		}
+
+		@media (max-width:767px) {
+			.single-casino__fixed-bar-right {
+				min-width: 150px
+			}
+		}
+
+		@media (max-width:575px) {
+			.single-casino__fixed-bar-right {
+				width: 50%;
+				min-width: 180px;
+				padding-left: 10px
+			}
+
+			.single-casino__fixed-bar-right button {
+				font-size: 1.4rem
+			}
+		}
+
+		.faq_list {
+			padding: 0;
+			margin: .7em 0
+		}
+
+		.faq_list__item {
+			list-style: none
+		}
+
+		.sidebar {
+			position: relative
+		}
+
+		@media (max-width:991px) {
+			.sidebar {
+				display: flex;
+				justify-content: center
+			}
+		}
+
+		@media (max-width:767px) {
+			.sidebar {
+				flex-direction: column;
+				align-items: center
+			}
+		}
+
+		.sidebar__block {
+			border-radius: 10px 10px 5px 5px;
+			background: var(--main-content-background);
+			margin: 0 0 20px
+		}
+
+		@media (max-width:991px) {
+			.sidebar__block {
+				width: 300px;
+				margin: 0 20px 20px
+			}
+		}
+
+		@media (max-width:767px) {
+			.sidebar__block {
+				margin: 0 auto 20px;
+				max-width: 100%
+			}
+		}
+
+		@media (max-width:575px) {
+			.sidebar__block {
+				width: 100%
+			}
+		}
+
+		.sidebar__block-ttl {
+			text-align: center;
+			font-size: 2.2rem;
+			font-weight: 700;
+			padding: 12px 15px;
+			border-radius: 5px;
+			position: relative;
+			color: var(--sb-title-color);
+			background: var(--sb-title-background)
+		}
+
+		.sidebar__block-content {
+			padding: 15px;
+			border-radius: 0 0 5px 5px;
+			background: var(--main-content-background)
+		}
+
+		.sidebar__top-casino-thumb {
+			position: relative;
+			background: 0 0;
+			border: 0;
+			outline: 0;
+			padding: 20px;
+			min-height: 100px;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			justify-content: center
+		}
+
+		.sidebar__top-casino-thumb:before {
+			content: "";
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 24px;
+			width: 24px;
+			padding: 16px;
+			border: 3px solid #fc6;
+			border-radius: 50%;
+			position: absolute;
+			z-index: 11;
+			background: #d29212 no-repeat center/18px url(../img/gold_cup_icon.png)
+		}
+
+		.sidebar__top-casino-thumb>img {
+			max-height: 150px;
+			border-radius: 5px;
+			position: relative;
+			z-index: 10
+		}
+
+		.sidebar__top-casino-name {
+			background: 0 0;
+			border: 0;
+			outline: 0;
+			text-align: center;
+			font-size: 2rem;
+			font-weight: 700;
+			display: block;
+			padding: 0;
+			width: 100%
+		}
+
+		.sidebar__top-casino-name strong {
+			display: block;
+			margin: 0 0 10px
+		}
+
+		.sidebar__top-casino-name label {
+			font-size: 1.4rem;
+			margin: 3px 0 0;
+			opacity: .5;
+			display: block;
+			line-height: 1em
+		}
+
+		.sidebar__top-casino-bonus,
+		.single-casino__default-bonus-value {
+			display: block;
+			font-size: 2.4rem;
+			margin: 4px 0 8px;
+			padding: 5px 30px;
+			position: relative;
+			background: var(--header-top-bg);
+			color: var(--sb-title-color);
+			clip-path: polygon(0 0, 8% 50%, 0 100%, 100% 100%, 92% 50%, 100%0)
+		}
+
+		.sidebar__top-casino-btn.button {
+			display: block;
+			width: 100%;
+			max-width: 250px;
+			font-size: 2rem;
+			margin: 10px auto 5px
+		}
+
+		.sidebar__now-playing-list {
+			padding: 0;
+			margin: 0
+		}
+
+		.sidebar__now-playing-list-item {
+			list-style: none;
+			display: flex;
+			align-items: center;
+			padding: 7px 0;
+			border-bottom: 1px solid var(--main-text-color)
+		}
+
+		.sidebar__now-playing-list-item-thumb {
+			min-width: 75px;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: center
+		}
+
+		.sidebar__now-playing-list-item-thumb img {
+			display: block;
+			border-radius: 2px
+		}
+
+		.sidebar__now-playing-list-item-right {
+			flex: 1;
+			padding-left: 10px;
+			position: relative
+		}
+
+		.sidebar__now-playing-list-item-right:after,
+		.sidebar__now-playing-list-item-right:before {
+			position: absolute;
+			left: 10px;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			-webkit-transition: all ease-out .2s;
+			-moz-transition: all ease-out .2s;
+			-o-transition: all ease-out .2s;
+			transition: all ease-out .2s
+		}
+
+		.sidebar__now-playing-list-item-right:before {
+			content: "";
+			top: 0;
+			background: rgba(0, 0, 0, .3)
+		}
+
+		.sidebar__now-playing-list-item-right:after {
+			content: "Играть";
+			display: block;
+			width: 100px;
+			height: 28px;
+			line-height: 28px;
+			top: -2px;
+			margin: auto;
+			text-align: center
+		}
+
+		.sidebar__now-playing-list-item-wins {
+			font-size: 1.2rem;
+			font-weight: 700;
+			line-height: 1.4em;
+			padding: 0 20px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center
+		}
+
+		.sidebar__now-playing-list-item-wins:nth-child(odd) {
+			background: rgba(0, 0, 0, .1)
+		}
+
+		.sidebar__now-playing-list-item-wins span:last-child.green {
+			color: var(--main-green-color)
+		}
+
+		.sidebar__now-playing-list-item-wins span:last-child.red {
+			color: var(--main-red-color)
+		}
+
+		.lgb1-footer {
+			padding: 20px 0 0;
+			background: var(--footer-main-bg);
+			position: relative;
+			z-index: 200
+		}
+
+		.lgb1-footer__nav {
+			padding: 10px 0
+		}
+
+		.lgb1-footer__nav-list {
+			display: flex;
+			align-items: flex-start;
+			padding: 0;
+			margin: 0
+		}
+
+		@media (max-width:575px) {
+			.lgb1-footer__nav-list {
+				flex-direction: column
+			}
+		}
+
+		.lgb1-footer__nav-list .widget_nav_menu {
+			margin: 0 25px;
+			width: 25%;
+			list-style: none
+		}
+
+		@media (max-width:575px) {
+			.lgb1-footer__nav-list .widget_nav_menu {
+				margin: 0 0 25px;
+				width: 100%
+			}
+		}
+
+		.lgb1-footer__nav-list .widget_nav_menu:first-child {
+			margin-left: 0
+		}
+
+		.lgb1-footer__nav-list .widget_nav_menu:last-child {
+			margin-right: 0
+		}
+
+		.lgb1-footer__nav-list .widget_nav_menu .widgettitle {
+			color: var(--footer-text-color);
+			font-size: 2rem;
+			border-bottom: 1px solid var(--footer-text-color);
+			padding: .5em;
+			margin: 0 0 .5em
+		}
+
+		.lgb1-footer__nav-list .widget_nav_menu .menu {
+			padding: 0 .5em;
+			margin: 0
+		}
+
+		.lgb1-footer__nav-list .widget_nav_menu .menu-item {
+			list-style: none
+		}
+
+		.lgb1-footer__nav-list .widget_nav_menu .menu-item a {
+			font-size: 1.5rem;
+			color: var(--footer-text-color);
+			filter: brightness(.5)
+		}
+
+		.lgb1-footer__nav-list .widget_nav_menu .menu-item a:hover {
+			filter: brightness(1);
+			text-decoration: underline
+		}
+
+		.lgb1-footer__copyrights,
+		.lgb1-footer__disclaimer {
+			padding: 7px 0;
+			text-align: center;
+			opacity: .2;
+			font-size: 1.4rem;
+			color: var(--footer-text-color)
+		}
+
+		.lgb1-footer__copyrights {
+			padding: 10px 0;
+			opacity: .6;
+			background: var(--footer-secondary-bg)
+		}
+
+		.breadcrumbs {
+			font-size: 1.3rem;
+			line-height: 1.2em;
+			opacity: .8;
+			border-bottom: 1px solid var(--main-text-color);
+			padding-bottom: 3px
+		}
+
+		.breadcrumbs__separator {
+			position: relative;
+			width: 10px;
+			margin: 0 5px;
+			font-size: 1.6rem;
+			font-weight: 700
+		}
+
+		.breadcrumbs__link {
+			color: var(--main-text-color)
+		}
+
+		.button {
+			outline: 0;
+			display: inline-block;
+			vertical-align: top;
+			white-space: nowrap;
+			-webkit-transition: all ease-out .2s;
+			-moz-transition: all ease-out .2s;
+			-o-transition: all ease-out .2s;
+			transition: all ease-out .2s
+		}
+
+		.button--reg {
+			background: var(--reg-button-background);
+			box-shadow: 0 4px 0#051505
+		}
+
+		.button--default:hover,
+		.button--login:hover,
+		.button--reg:hover,
+		.sidebar__now-playing-list-item-right:hover:after {
+			transform: translateY(4px);
+			box-shadow: 0 0 0#051505;
+			filter: brightness(.9)
+		}
+
+		.button--default,
+		.button--login,
+		.button--reg,
+		.sidebar__now-playing-list-item-right:after {
+			color: #fff;
+			padding: 8px 25px;
+			border: 0;
+			font-size: 1.6rem;
+			font-weight: 700;
+			border-radius: 30px
+		}
+
+		.button--login {
+			background: var(--login-button-background);
+			box-shadow: 0 4px 0#130b04
+		}
+
+		.button--default,
+		.sidebar__now-playing-list-item-right:after {
+			background: var(--reg-button-background);
+			box-shadow: 0 4px 0#051505
+		}
+
+		.sidebar__now-playing-list-item-right:after {
+			padding: 0 10px
+		}
+
+		.download_block,
+		.download_block li {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap
+		}
+
+		.download_block {
+			padding: 15px;
+			margin: 10px auto;
+			clear: both;
+			width: fit-content
+		}
+
+		.download_block li {
+			width: 150px;
+			min-width: 150px;
+			height: 150px;
+			margin: 0 15px 15px;
+			list-style: none;
+			border: 5px solid #ccc;
+			border-radius: 15px;
+			position: relative;
+			-webkit-transition: all ease-out .3s;
+			-moz-transition: all ease-out .3s;
+			-o-transition: all ease-out .3s;
+			transition: all ease-out .3s
+		}
+
+		@media (max-width:575px) {
+			.download_block li {
+				width: 120px;
+				min-width: 120px;
+				height: 120px
+			}
+		}
+
+		@media (max-width:499px) {
+			.download_block li {
+				width: 100px;
+				min-width: 100px;
+				height: 100px;
+				margin: 0 10px 15px
+			}
+		}
+
+		.download_block li:hover {
+			transform: scale(.9)
+		}
+
+		.download_block li.mobapps svg {
+			max-width: 50px;
+			margin: 15px 0 0
+		}
+
+		@media (max-width:499px) {
+			.download_block li.mobapps svg {
+				max-width: 30px
+			}
+		}
+
+		.download_block li.mobapps svg:first-child {
+			margin-right: 5px
+		}
+
+		.download_block li.mobapps svg:nth-child(2) {
+			margin-left: 5px;
+			max-width: 40px
+		}
+
+		@media (max-width:575px) {
+			.download_block li.mobapps svg:nth-child(2) {
+				max-width: 30px
+			}
+		}
+
+		@media (max-width:499px) {
+			.download_block li.mobapps svg:nth-child(2) {
+				max-width: 25px
+			}
+		}
+
+		.download_block li svg {
+			display: block;
+			max-height: 80px
+		}
+
+		@media (max-width:575px) {
+			.download_block li svg {
+				max-width: 60px
+			}
+		}
+
+		@media (max-width:499px) {
+			.download_block li svg {
+				max-width: 45px
+			}
+		}
+
+		.download_block li strong {
+			display: block;
+			margin: 0;
+			text-align: center;
+			min-width: 100%;
+			line-height: 1.2em
+		}
+
+		.download_block li .check,
+		.download_block li .cross {
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			top: -16px;
+			right: -16px;
+			border-radius: 50%
+		}
+
+		.download_block li .check {
+			background: no-repeat center/24px url(../img/check_icon.svg)green
+		}
+
+		.download_block li .cross {
+			background: no-repeat center/24px url(../img/cross_icon.svg)red
+		}
+
+		.error404__text:before {
+			content: "404";
+			line-height: 22rem;
+			font-size: 20rem;
+			font-weight: 900;
+			text-align: center;
+			display: block;
+			opacity: .5;
+			position: relative;
+			z-index: 19
+		}
+
+		@media (max-width:575px) {
+			.error404__text:before {
+				line-height: 12rem;
+				font-size: 10rem
+			}
+		}
+
+		.error404__text p {
+			position: relative;
+			z-index: 20
+		}
+
+		.email-popup__form .wpcf7-form-control-wrap input[type=email],
+		.reg_popup__form .wpcf7-form-control-wrap input[type=email],
+		.to_top_btn {
+			height: 40px;
+			-webkit-transition: all ease-out .2s;
+			-moz-transition: all ease-out .2s;
+			-o-transition: all ease-out .2s;
+			transition: all ease-out .2s
+		}
+
+		.to_top_btn {
+			display: none;
+			position: fixed;
+			bottom: 50px;
+			right: 25px;
+			width: 40px;
+			z-index: 9999;
+			cursor: pointer;
+			border-radius: 50%;
+			border: 2px solid #fff;
+			background: rgba(0, 0, 0, .5) no-repeat center/60%url(../img/arrow_top.png)
+		}
+
+		@media (max-width:991px) {
+			.to_top_btn {
+				bottom: 100px
+			}
+		}
+
+		@media (max-width:767px) {
+			.to_top_btn {
+				width: 32px;
+				height: 32px;
+				background-size: 60%
+			}
+		}
+
+		.to_top_btn:hover {
+			background: #000 no-repeat center/60%url(../img/arrow_top.png)
+		}
+
+		.popup {
+			position: fixed;
+			z-index: 2000;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: none
+		}
+
+		.popup__inner {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100%
+		}
+
+		.popup-close {
+			width: 50px;
+			height: 50px;
+			border: 0;
+			position: absolute;
+			top: -30px;
+			right: -60px
+		}
+
+		.email-popup-close,
+		.popup-close,
+		.reg_popup-close {
+			padding: 0;
+			outline: 0;
+			background: #c00000 url(../img/close_icon.png)center/15px no-repeat;
+			border-radius: 25px;
+			box-shadow: 0 5px 0#300;
+			-webkit-transition: all ease-out .2s;
+			-moz-transition: all ease-out .2s;
+			-o-transition: all ease-out .2s;
+			transition: all ease-out .2s
+		}
+
+		@media (max-width:991px) {
+
+			.email-popup-close,
+			.popup-close,
+			.reg_popup-close {
+				position: fixed;
+				top: 10px;
+				right: 10px;
+				width: 40px;
+				height: 40px;
+				background: #c00000 url(../img/close_icon.png)center/15px no-repeat
+			}
+		}
+
+		.email-popup-close:hover,
+		.popup-close:hover,
+		.reg_popup-close:hover {
+			box-shadow: none;
+			background: red url(../img/close_icon.png)center/15px no-repeat;
+			-webkit-transform: translateY(3px);
+			-moz-transform: translateY(3px);
+			transform: translateY(3px)
+		}
+
+		@media (max-width:991px) {
+
+			.email-popup-close:hover,
+			.popup-close:hover,
+			.reg_popup-close:hover {
+				background: red url(../img/close_icon.png)center/12px no-repeat
+			}
+		}
+
+		.email-popup,
+		.reg_popup {
+			width: 550px;
+			height: fit-content;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			color: #fff;
+			border-radius: 5px;
+			border: 3px solid #d8c4ff;
+			max-width: 500px;
+			padding: 10px 20px;
+			background: #171717;
+			-webkit-box-shadow: 0 8px 10px #000;
+			box-shadow: 0 8px 10px #000;
+			align-items: flex-start;
+			justify-content: flex-start
+		}
+
+		@media (max-width:575px) {
+
+			.email-popup,
+			.reg_popup {
+				width: 90vw;
+				height: fit-content;
+				max-height: 90vh;
+				box-sizing: border-box
+			}
+		}
+
+		.email-popup__ttl,
+		.reg_popup__ttl {
+			border-bottom: 1px solid #646a87;
+			font-size: 24px;
+			line-height: 1.4em;
+			padding-bottom: 7px;
+			text-transform: uppercase;
+			text-align: center;
+			color: #fff
+		}
+
+		.email-popup__ttl span,
+		.reg_popup__ttl span {
+			color: #1ff89c
+		}
+
+		.email-popup-close,
+		.reg_popup-close {
+			position: absolute;
+			top: -30px;
+			right: -35px;
+			border: 0;
+			width: 30px;
+			height: 30px;
+			background-size: 15px
+		}
+
+		.email-popup__inner,
+		.reg_popup__inner {
+			height: fit-content;
+			position: relative;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			-webkit-box-align: center;
+			align-items: center;
+			flex-direction: column;
+			justify-content: center
+		}
+
+		.email-popup__inner .error_valid_message,
+		.reg_popup__inner .error_valid_message {
+			color: #ff0a09;
+			position: absolute;
+			top: 10px;
+			left: 0;
+			right: 0;
+			text-align: center;
+			font-size: 14px
+		}
+
+		.email-popup__inner .ref_btn,
+		.reg_popup__inner .ref_btn {
+			line-height: 36px;
+			height: 40px;
+			border-radius: 20px;
+			width: 300px;
+			font-size: 1.7rem;
+			text-transform: uppercase;
+			margin-top: 10px;
+			outline: 0;
+			border: 0;
+			color: #fff
+		}
+
+		@media (max-width:575px) {
+
+			.email-popup__inner .ref_btn,
+			.reg_popup__inner .ref_btn {
+				width: 260px
+			}
+		}
+
+		.email-popup__form,
+		.reg_popup__form {
+			width: 100%;
+			padding: 40px 0 15px
+		}
+
+		.email-popup__form .wpcf7-form-control-wrap,
+		.reg_popup__form .wpcf7-form-control-wrap {
+			display: block
+		}
+
+		.email-popup__form .wpcf7-form-control-wrap input[type=email],
+		.reg_popup__form .wpcf7-form-control-wrap input[type=email] {
+			display: block;
+			line-height: 40px;
+			padding: 5px 10px;
+			width: 80%;
+			max-width: 300px;
+			text-align: left;
+			margin: 0 auto 20px;
+			border: 2px solid #ccc;
+			box-sizing: border-box;
+			border-radius: 5px
+		}
+
+		@media (max-width:575px) {
+
+			.email-popup__form .wpcf7-form-control-wrap input[type=email],
+			.reg_popup__form .wpcf7-form-control-wrap input[type=email] {
+				max-width: 100%;
+				margin: 0 auto 10px;
+				width: 100%
+			}
+		}
+
+		.email-popup__form .wpcf7-form-control-wrap input[type=email]:active,
+		.email-popup__form .wpcf7-form-control-wrap input[type=email]:hover,
+		.reg_popup__form .wpcf7-form-control-wrap input[type=email]:active,
+		.reg_popup__form .wpcf7-form-control-wrap input[type=email]:hover {
+			border-color: #4986f5
+		}
+
+		.email-popup__form .wpcf7-form-control-wrap input[type=email].error_valid,
+		.reg_popup__form .wpcf7-form-control-wrap input[type=email].error_valid {
+			border: 2px solid #ff0a09
+		}
+
+		.email-popup__form .wpcf7-submit,
+		.reg_popup__form .wpcf7-submit {
+			color: #fff;
+			width: fit-content;
+			max-width: 90%;
+			outline: 0;
+			font-size: 14px;
+			border: 0;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			height: 40px;
+			border-radius: 20px;
+			padding: 0 40px;
+			margin: -2px auto 0;
+			line-height: 22px;
+			font-weight: 800;
+			font-family: Muller, sans-serif;
+			letter-spacing: 1px;
+			white-space: nowrap;
+			cursor: pointer;
+			-webkit-box-shadow: 0 3px 0 0#14260b, 0 4px 4px 0#000;
+			box-shadow: 0 3px 0 0#14260b, 0 4px 4px 0#000;
+			background-color: #60d139;
+			-webkit-transition: all ease-out .3s;
+			-moz-transition: all ease-out .3s;
+			-o-transition: all ease-out .3s;
+			transition: all ease-out .3s
+		}
+
+		.email-popup__form .wpcf7-submit:hover,
+		.reg_popup__form .wpcf7-submit:hover {
+			transform: translateY(2px);
+			-webkit-box-shadow: 0 1px 0 0#871628, 0 4px 4px 0#000, inset 0 15px 15px -3px rgba(255, 255, 255, .4);
+			box-shadow: 0 1px 0 0#871628, 0 4px 4px 0#000, inset 0 15px 15px -3px rgba(255, 255, 255, .4)
+		}
+
+		.email-popup__form .hidden-input,
+		.reg_popup__form .hidden-input {
+			height: 0;
+			overflow: hidden
+		}
+
+		.email-popup__form .hidden-input input,
+		.reg_popup__form .hidden-input input {
+			visibility: hidden;
+			height: 0;
+			width: 0;
+			opacity: 0
+		}
+
+		.email-popup__form .wpcf7-response-output,
+		.reg_popup__form .wpcf7-response-output {
+			text-align: center;
+			padding: 10px 20px;
+			border-radius: 20px
+		}
+
+		.email-popup__form .wpcf7 form.aborted .wpcf7-response-output,
+		.email-popup__form .wpcf7 form.failed .wpcf7-response-output,
+		.reg_popup__form .wpcf7 form.aborted .wpcf7-response-output,
+		.reg_popup__form .wpcf7 form.failed .wpcf7-response-output {
+			display: none
+		}
+
+		.email-popup__form .wpcf7-form__success-message,
+		.reg_popup__form .wpcf7-form__success-message {
+			text-align: center;
+			color: #fff
+		}
+
+		.email-popup__form .kc_captcha,
+		.reg_popup__form .kc_captcha {
+			margin: 10px auto 20px
+		}
+
+		.email-popup__form .kc_captcha .captcha-image svg,
+		.reg_popup__form .kc_captcha .captcha-image svg {
+			padding: 5px;
+			width: 50px;
+			height: 50px
+		}
+
+		.email-popup__bottom-text,
+		.reg_popup__bottom-text {
+			text-align: center;
+			font-size: 1.8rem
+		}
+
+		.email-popup label,
+		.reg_popup label {
+			margin-bottom: 5px;
+			display: block;
+			text-align: left;
+			width: 80%;
+			font-size: 1.5rem;
+			max-width: 300px
+		}
+
+		@media (max-width:575px) {
+
+			.email-popup label,
+			.reg_popup label {
+				max-width: 100%;
+				width: 100%
+			}
+		}
+
+		.email-popup p,
+		.reg_popup p {
+			font-size: 16px;
+			max-width: 80%;
+			margin: 10px auto
+		}
+
+		@media (max-width:575px) {
+
+			.email-popup p,
+			.reg_popup p {
+				margin: 5px auto;
+				max-width: 100%
+			}
+		}
+
+		.popup-shadow {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1998;
+			background: rgba(0, 0, 0, .7)
+		}
+
+		.err {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.des_cont_m h2 {
+			font-size: 27px;
+			margin-bottom: 20px;
+		}
+
+		.reviews {
+			margin: 50px 0;
+		}
+
+		.reviews h3 {
+			display: inline-flex;
+			align-items: center;
+		}
+
+		.reviews h3::before {
+			content: "";
+			width: 35px;
+			flex: 0 0 35px;
+			height: 35px;
+			border-radius: 50%;
+			margin-right: 10px;
+			background: rgba(0, 0, 0, .2);
+		}
+
+		.block_ques {
+			margin-bottom: 20px;
+		}
+
+		.block_ques h3 {
+			margin-bottom: 10px;
+		}
+
+		/* games */
+		.games {
+			position: relative;
+			margin: 30px 0;
+		}
+
+		.games__link {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.games__list {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: 15px;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.games__item {
+			position: relative;
+			padding-bottom: 60%;
+			border-radius: 10px;
+			overflow: hidden;
+			z-index: 2;
+		}
+
+		.games__item:hover .games__hover {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+
+		.games__item img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.games__hover {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			transition: 0.3s ease 0s;
+			background: rgba(255, 255, 255, 0.8)
+		}
+
+		.games__name {
+			font-size: 20px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		.games__btn {
+			background: #03a528;
+			border: 3px solid #03a528;
+			border-radius: 10px;
+			padding: 5px 20px;
+			color: #fff;
+			cursor: pointer;
+			transition: 0.3s ease 0s;
+		}
+
+		.games__btn:hover {
+			background: transparent;
+		}
+
+		@media (max-width: 768px) {
+			.games__list {
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 10px
+			}
+		}
+
+		@media (max-width: 500px) {
+			.games__list {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		/* games */
+	</style>
+	<link rel="shortcut icon" href="favicon.png">
+	<style amp-boilerplate>
+		body {
+			-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+			-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+			-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+			animation: -amp-start 8s steps(1, end) 0s 1 normal both
+		}
+
+		@-webkit-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@-moz-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@-ms-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@-o-keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+
+		@keyframes -amp-start {
+			from {
+				visibility: hidden
+			}
+
+			to {
+				visibility: visible
+			}
+		}
+	</style><noscript>
+		<style amp-boilerplate>
+			body {
+				-webkit-animation: none;
+				-moz-animation: none;
+				-ms-animation: none;
+				animation: none
+			}
+		</style>
+	</noscript>
+
+</head>
+
+<body class="home page-template-default page page-id-2 wp-custom-logo">
+	<header class="lgb1-header">
+		<div class="lgb1-header__top">
+			<div class="container lgb1-header__top-container">
+				<div class="lgb1-header__top-logo">
+					<img alt="" src="content/img/casx-logo.png">
+				</div>
+				<div class="lgb1-header__right">
+					<div class="lgb1-header__btns">
+						<button class="button button--reg js-ref-btn" data-id="L3hwbGF5">Регистрация</button>
+						<button class="button button--login js-ref-btn" data-id="L3hwbGF5">Вход</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="lgb1-header__bottom">
+		<div class="lgb1-header__slider js-ref-btn" data-id="L3hwbGF5">
+			<img alt="" src="content/img/sl1.png">
+		</div>
+	</div>
+	<div class="container">
+
+		<div class="games-list">
+			<div class="games">
+				<ul class="games__list">
+					<li class="games__item">
+						<img src="content/img/01.png" alt="">
+						<div class="games__hover">
+							<span class="games__name">Viking Go Berzerk</span>
+							<span class="games__btn">Играть</span>
+						</div>
+					</li>
+					<li class="games__item">
+						<img src="content/img/02.png" alt="">
+						<div class="games__hover">
+							<span class="games__name">Space Wars</span>
+							<span class="games__btn">Играть</span>
+						</div>
+					</li>
+					<li class="games__item">
+						<img src="content/img/03.png" alt="">
+						<div class="games__hover">
+							<span class="games__name">Crystal Queen</span>
+							<span class="games__btn">Играть</span>
+						</div>
+					</li>
+					<li class="games__item">
+						<img src="content/img/04.png" alt="">
+						<div class="games__hover">
+							<span class="games__name">Big Bad Wolf</span>
+							<span class="games__btn">Играть</span>
+						</div>
+					</li>
+					<li class="games__item">
+						<img src="content/img/05.png" alt="">
+						<div class="games__hover">
+							<span class="games__name">Immortal Romance</span>
+							<span class="games__btn">Играть</span>
+						</div>
+					</li>
+					<li class="games__item">
+						<img src="content/img/06.png" alt="">
+						<div class="games__hover">
+							<span class="games__name">Starburst</span>
+							<span class="games__btn">Играть</span>
+						</div>
+					</li>
+					<li class="games__item">
+						<img src="content/img/07.png" alt="">
+						<div class="games__hover">
+							<span class="games__name">Playboy</span>
+							<span class="games__btn">Играть</span>
+						</div>
+					</li>
+					<li class="games__item">
+						<img src="content/img/08.png" alt="">
+						<div class="games__hover">
+							<span class="games__name">Sakura Fortune</span>
+							<span class="games__btn">Играть</span>
+						</div>
+					</li>
+					<li class="games__item">
+						<img src="content/img/09.png" alt="">
+						<div class="games__hover">
+							<span class="games__name">Pink Elephant</span>
+							<span class="games__btn">Играть</span>
+						</div>
+					</li>
+					<li class="games__item">
+						<img src="content/img/10.png" alt="">
+						<div class="games__hover">
+							<span class="games__name">Gonzos Quest</span>
+							<span class="games__btn">Играть</span>
+						</div>
+					</li>
+					<li class="games__item">
+						<img src="content/img/11.png" alt="">
+						<div class="games__hover">
+							<span class="games__name">Gods Temple</span>
+							<span class="games__btn">Играть</span>
+						</div>
+					</li>
+					<li class="games__item">
+						<img src="content/img/12.png" alt="">
+						<div class="games__hover">
+							<span class="games__name">Book of Dead</span>
+							<span class="games__btn">Играть</span>
+						</div>
+					</li>
+				</ul>
+				<a class="games__link" href=""></a>
+			</div>
+		</div>
+	</div>
+	<section class="lgb1-main js-sticky-parent">
+		<div class="container">
+			<article class="content-article">
+				<div class="text-block">
+					<h1>Casino X &ndash; &#1079;&#1077;&#1088;&#1082;&#1072;&#1083;&#1086;
+						&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1048;&#1082;&#1089;</h1>
+					<div id="toc_container" class="toc_wrap_left no_bullets">
+						<p class="toc_title">&#1057;&#1086;&#1076;&#1077;&#1088;&#1078;&#1072;&#1085;&#1080;&#1077;</p>
+						<ul class="toc_list">
+							<li><a href="">&#1054;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081;
+									&#1089;&#1072;&#1081;&#1090; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;</a></li>
+							<li><a href="">&#1056;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1103; &#1080;
+									&#1074;&#1093;&#1086;&#1076; &#1074; &#1072;&#1082;&#1082;&#1072;&#1091;&#1085;&#1090;
+									&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1048;&#1082;&#1089;</a></li>
+							<li><a href="">&#1042;&#1089;&#1077; &#1073;&#1086;&#1085;&#1091;&#1089;&#1099; &#1086;&#1090;
+									Casino X</a></li>
+							<li><a href="">&#1058;&#1080;&#1087;&#1099; &#1080;&#1075;&#1088;&#1086;&#1074;&#1099;&#1093;
+									&#1072;&#1074;&#1090;&#1086;&#1084;&#1072;&#1090;&#1086;&#1074; &#1074; Casino X</a></li>
+							<li><a href="">&#1047;&#1077;&#1088;&#1082;&#1072;&#1083;&#1086;
+									&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;</a></li>
+							<li><a href="">&#1055;&#1086;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1077;
+									&#1089;&#1095;&#1077;&#1090;&#1072; &#1074; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;</a>
+							</li>
+							<li><a href="">&#1050;&#1072;&#1082; &#1074;&#1099;&#1074;&#1077;&#1089;&#1090;&#1080;
+									&#1074;&#1099;&#1080;&#1075;&#1088;&#1099;&#1096; &#1074; Casino X</a></li>
+							<li><a href="">&#1058;&#1091;&#1088;&#1085;&#1080;&#1088;&#1099; &#1074;
+									&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1048;&#1082;&#1089;</a>
+								<ul>
+									<li><a href="">&#1040;&#1085;&#1086;&#1085;&#1089;&#1099;
+											&#1073;&#1083;&#1080;&#1078;&#1072;&#1081;&#1096;&#1080;&#1093;
+											&#1090;&#1091;&#1088;&#1085;&#1080;&#1088;&#1086;&#1074;</a></li>
+								</ul>
+							</li>
+							<li><a href="">&#1052;&#1086;&#1073;&#1080;&#1083;&#1100;&#1085;&#1072;&#1103;
+									&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Casino X &mdash; &#1082;&#1072;&#1082;
+									&#1089;&#1082;&#1072;&#1095;&#1072;&#1090;&#1100;
+									&#1087;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1077;</a></li>
+							<li><a href="">&#1055;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1072;
+									&#1083;&#1086;&#1103;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080;
+									(&#1089;&#1090;&#1072;&#1090;&#1091;&#1089;&#1099; &#1080;&#1075;&#1088;&#1086;&#1082;&#1086;&#1074;)
+									&#1074; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;</a>
+								<ul>
+									<li><a href="">&#1042;&#1089;&#1077; &#1089;&#1090;&#1072;&#1090;&#1091;&#1089;&#1099;</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="table-wrapper">
+						<table>
+							<tbody>
+								<tr>
+									<td>&#128081; &#1054;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081;
+										&#1089;&#1072;&#1081;&#1090;</td>
+									<td><button class="intext-btn-link js-ref-btn " data-id="L3hwbGF5">casino-x.com</button></td>
+								</tr>
+								<tr>
+									<td>&#128176;
+										&#1055;&#1088;&#1080;&#1074;&#1077;&#1090;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1099;&#1081;
+										&#1073;&#1086;&#1085;&#1091;&#1089;</td>
+									<td>200% &#1085;&#1072; &#1087;&#1077;&#1088;&#1074;&#1099;&#1081;
+										&#1076;&#1077;&#1087;&#1086;&#1079;&#1080;&#1090; + 200
+										&#1092;&#1088;&#1080;&#1089;&#1087;&#1080;&#1085;&#1086;&#1074;</td>
+								</tr>
+								<tr>
+									<td>&#128072; &#1071;&#1079;&#1099;&#1082;&#1080; &#1089;&#1072;&#1081;&#1090;&#1072;</td>
+									<td>&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;,
+										&#1040;&#1085;&#1075;&#1083;&#1080;&#1081;&#1089;&#1082;&#1080;&#1081;,
+										&#1053;&#1077;&#1084;&#1077;&#1094;&#1082;&#1080;&#1081;,
+										&#1048;&#1089;&#1087;&#1072;&#1085;&#1089;&#1082;&#1080;&#1081;,
+										&#1060;&#1080;&#1085;&#1089;&#1082;&#1080;&#1081;,
+										&#1053;&#1086;&#1088;&#1074;&#1077;&#1078;&#1089;&#1082;&#1080;&#1081;,
+										&#1071;&#1087;&#1086;&#1085;&#1089;&#1082;&#1080;&#1081;,
+										&#1050;&#1080;&#1090;&#1072;&#1081;&#1089;&#1082;&#1080;&#1081;,
+										&#1058;&#1091;&#1088;&#1077;&#1094;&#1082;&#1080;&#1081;</td>
+								</tr>
+								<tr>
+									<td>&#128182; &#1055;&#1083;&#1072;&#1090;&#1077;&#1078;&#1085;&#1099;&#1077;
+										&#1089;&#1080;&#1089;&#1090;&#1077;&#1084;&#1099;</td>
+									<td>Visa, Mastercard, Maestro, QIWI, WebMoney,
+										&#1071;&#1085;&#1076;&#1077;&#1082;&#1089;.&#1044;&#1077;&#1085;&#1100;&#1075;&#1080;, Skrill,
+										Neteller, EcoPayz, Bitcoin, Litecoin, Ethereum</td>
+								</tr>
+								<tr>
+									<td>&#127918; &#1042;&#1080;&#1076;&#1099; &#1080;&#1075;&#1088;</td>
+									<td>&#1048;&#1075;&#1088;&#1086;&#1074;&#1099;&#1077;
+										&#1072;&#1074;&#1090;&#1086;&#1084;&#1072;&#1090;&#1099;,
+										&#1056;&#1091;&#1083;&#1077;&#1090;&#1082;&#1072;,
+										&#1041;&#1083;&#1101;&#1082;&#1076;&#1078;&#1077;&#1082;,
+										&#1041;&#1072;&#1082;&#1082;&#1072;&#1088;&#1072;,
+										&#1042;&#1080;&#1076;&#1077;&#1086;&#1087;&#1086;&#1082;&#1077;&#1088;,
+										&#1051;&#1072;&#1081;&#1074;-&#1082;&#1072;&#1079;&#1080;&#1085;&#1086;</td>
+								</tr>
+								<tr>
+									<td>&#127873; &#1042;&#1080;&#1076;&#1099; &#1073;&#1086;&#1085;&#1091;&#1089;&#1086;&#1074;</td>
+									<td>&#1055;&#1088;&#1080;&#1074;&#1077;&#1090;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1099;&#1081;
+										&#1073;&#1086;&#1085;&#1091;&#1089;, &#1041;&#1086;&#1085;&#1091;&#1089;&#1099; &#1085;&#1072;
+										&#1076;&#1077;&#1087;&#1086;&#1079;&#1080;&#1090;,
+										&#1041;&#1077;&#1089;&#1087;&#1083;&#1072;&#1090;&#1085;&#1099;&#1077;
+										&#1089;&#1087;&#1080;&#1085;&#1099;, &#1041;&#1086;&#1085;&#1091;&#1089;&#1099; &#1085;&#1072;
+										&#1074;&#1099;&#1093;&#1086;&#1076;&#1085;&#1099;&#1077;,
+										&#1045;&#1078;&#1077;&#1085;&#1077;&#1076;&#1077;&#1083;&#1100;&#1085;&#1099;&#1077;
+										&#1073;&#1086;&#1085;&#1091;&#1089;&#1099;,
+										&#1055;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1072;
+										&#1083;&#1086;&#1103;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080;</td>
+								</tr>
+								<tr>
+									<td>&#127920; &#1055;&#1088;&#1086;&#1074;&#1072;&#1081;&#1076;&#1077;&#1088;&#1099;</td>
+									<td>Microgaming, NetEnt, Play&rsquo;n GO, Quickspin, Yggdrasil, Thunderkick, ELK Studios, Big Time
+										Gaming, Push Gaming, Pragmatic Play &#1080; &#1076;&#1088;&#1091;&#1075;&#1080;&#1077;</td>
+								</tr>
+								<tr>
+									<td>&#10004;&#65039; &#1051;&#1080;&#1094;&#1077;&#1085;&#1079;&#1080;&#1103;</td>
+									<td>&#1050;&#1102;&#1088;&#1072;&#1089;&#1072;&#1086;
+										&#1043;&#1077;&#1081;&#1084;&#1080;&#1085;&#1075;</td>
+								</tr>
+								<tr>
+									<td>&#128077; &#1057;&#1072;&#1087;&#1087;&#1086;&#1088;&#1090;
+										&#1082;&#1072;&#1079;&#1080;&#1085;&#1086;</td>
+									<td>&#1069;&#1083;. &#1087;&#1086;&#1095;&#1090;&#1072;: <a href="" class="__cf_email__"
+											data-cfemail="a8dbddd8d8c7dadce8cbc9dbc1c6c785d086cbc7c5">[email&#160;protected]</a>,
+										&#1058;&#1077;&#1083;.: +35627780669</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p>&#1050;&#1072;&#1079;&#1080;&#1085;&#1086; &#1048;&#1082;&#1089;
+						&#1087;&#1086;&#1103;&#1074;&#1080;&#1083;&#1086;&#1089;&#1100; &#1074; 2012 &#1075;&#1086;&#1076;&#1091;.
+						&#1054;&#1085;&#1086; &#1073;&#1099;&#1083;&#1086; &#1089;&#1086;&#1079;&#1076;&#1072;&#1085;&#1086;
+						&#1085;&#1072; &#1083;&#1080;&#1094;&#1077;&#1085;&#1079;&#1080;&#1080;
+						&#1050;&#1102;&#1088;&#1072;&#1089;&#1072;&#1086; &#1080; &#1089;&#1088;&#1072;&#1079;&#1091;
+						&#1087;&#1086;&#1083;&#1091;&#1095;&#1080;&#1083;&#1086;
+						&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1086;
+						&#1087;&#1086;&#1083;&#1086;&#1078;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1093;
+						&#1086;&#1090;&#1079;&#1099;&#1074;&#1086;&#1074; &#1086;&#1090;
+						&#1083;&#1102;&#1073;&#1080;&#1090;&#1077;&#1083;&#1077;&#1081;
+						&#1072;&#1079;&#1072;&#1088;&#1090;&#1085;&#1099;&#1093; &#1080;&#1075;&#1088;.</p>
+					<p>&#1044;&#1083;&#1103; &#1085;&#1072;&#1095;&#1072;&#1083;&#1072; &#1080;&#1075;&#1088;&#1099; &#1074;
+						&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;
+						&#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086;
+						&#1087;&#1088;&#1086;&#1081;&#1090;&#1080;
+						&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1102; &#1080;
+						&#1087;&#1088;&#1086;&#1074;&#1077;&#1088;&#1082;&#1091; &#1083;&#1080;&#1095;&#1085;&#1086;&#1081;
+						&#1080;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1080;.
+						&#1054;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1089;&#1072;&#1081;&#1090;
+						Casino X &#1089;&#1090;&#1072;&#1088;&#1072;&#1077;&#1090;&#1089;&#1103;
+						&#1087;&#1086;&#1076;&#1076;&#1077;&#1088;&#1078;&#1080;&#1074;&#1072;&#1090;&#1100;
+						&#1074;&#1099;&#1089;&#1086;&#1082;&#1080;&#1081; &#1091;&#1088;&#1086;&#1074;&#1077;&#1085;&#1100;
+						&#1086;&#1073;&#1089;&#1083;&#1091;&#1078;&#1080;&#1074;&#1072;&#1085;&#1080;&#1103;, &#1080;
+						&#1086;&#1087;&#1077;&#1088;&#1072;&#1094;&#1080;&#1080; &#1087;&#1086;
+						&#1074;&#1099;&#1074;&#1086;&#1076;&#1091; &#1089;&#1088;&#1077;&#1076;&#1089;&#1090;&#1074;
+						&#1086;&#1073;&#1088;&#1072;&#1073;&#1072;&#1090;&#1099;&#1074;&#1072;&#1102;&#1090;&#1089;&#1103; &#1074;
+						&#1090;&#1077;&#1095;&#1077;&#1085;&#1080;&#1077; 24 &#1095;&#1072;&#1089;&#1086;&#1074;.
+						&#1069;&#1090;&#1086; &#1085;&#1072;&#1076;&#1077;&#1078;&#1085;&#1099;&#1081; &#1080;
+						&#1083;&#1080;&#1094;&#1077;&#1085;&#1079;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1085;&#1099;&#1081;
+						&#1080;&#1075;&#1088;&#1086;&#1074;&#1086;&#1081; &#1082;&#1083;&#1091;&#1073;,
+						&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1081; &#1088;&#1072;&#1073;&#1086;&#1090;&#1072;&#1077;&#1090;
+						&#1085;&#1072; &#1088;&#1099;&#1085;&#1082;&#1077; &#1091;&#1078;&#1077; &#1073;&#1086;&#1083;&#1077;&#1077;
+						&#1076;&#1077;&#1089;&#1103;&#1090;&#1080; &#1083;&#1077;&#1090;.</p>
+					<h2><span id="i">&#1054;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081;
+							&#1089;&#1072;&#1081;&#1090; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;</span></h2>
+					<p>&#1054;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1089;&#1072;&#1081;&#1090;
+						&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061; &mdash; &#1101;&#1090;&#1086;
+						&#1087;&#1086;&#1088;&#1090;&#1072;&#1083;, &#1075;&#1076;&#1077; &#1074;&#1099;
+						&#1084;&#1086;&#1078;&#1077;&#1090;&#1077;
+						&#1079;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1090;&#1100;&#1089;&#1103;
+						&#1080; &#1085;&#1072;&#1095;&#1072;&#1090;&#1100; &#1080;&#1075;&#1088;&#1072;&#1090;&#1100; &#1074;
+						&#1072;&#1079;&#1072;&#1088;&#1090;&#1085;&#1099;&#1077; &#1080;&#1075;&#1088;&#1099; &#1085;&#1072;
+						&#1088;&#1077;&#1072;&#1083;&#1100;&#1085;&#1099;&#1077; &#1076;&#1077;&#1085;&#1100;&#1075;&#1080;.
+						&#1057;&#1072;&#1081;&#1090; &#1080;&#1084;&#1077;&#1077;&#1090;
+						&#1087;&#1088;&#1086;&#1089;&#1090;&#1086;&#1081; &#1080; &#1091;&#1076;&#1086;&#1073;&#1085;&#1099;&#1081;
+						&#1080;&#1085;&#1090;&#1077;&#1088;&#1092;&#1077;&#1081;&#1089;,
+						&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1081;
+						&#1087;&#1086;&#1079;&#1074;&#1086;&#1083;&#1103;&#1077;&#1090; &#1073;&#1099;&#1089;&#1090;&#1088;&#1086;
+						&#1086;&#1088;&#1080;&#1077;&#1085;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1090;&#1100;&#1089;&#1103;
+						&#1074; &#1077;&#1075;&#1086; &#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1086;&#1085;&#1072;&#1083;&#1077;.
+					</p>
+					<p>
+						<img fetchpriority="high" decoding="async" alt width="1040" height="457"
+							class="size-full wp-image-45 aligncenter" src="content/img/casino_x_site.jpg">
+					</p>
+					<p>&nbsp;</p>
+					<p>&#1053;&#1072; &#1089;&#1072;&#1081;&#1090;&#1077; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;
+						&#1074;&#1099; &#1085;&#1072;&#1081;&#1076;&#1077;&#1090;&#1077;
+						&#1073;&#1086;&#1083;&#1100;&#1096;&#1086;&#1081; &#1074;&#1099;&#1073;&#1086;&#1088; &#1080;&#1075;&#1088;:
+						&#1089;&#1083;&#1086;&#1090;&#1099;, &#1088;&#1091;&#1083;&#1077;&#1090;&#1082;&#1091;,
+						&#1082;&#1072;&#1088;&#1090;&#1086;&#1095;&#1085;&#1099;&#1077; &#1080;&#1075;&#1088;&#1099;,
+						&#1085;&#1072;&#1089;&#1090;&#1086;&#1083;&#1100;&#1085;&#1099;&#1077; &#1080;&#1075;&#1088;&#1099; &#1080;
+						&#1076;&#1088;. &#1050;&#1072;&#1078;&#1076;&#1099;&#1081; &#1080;&#1075;&#1088;&#1086;&#1082;
+						&#1089;&#1084;&#1086;&#1078;&#1077;&#1090; &#1085;&#1072;&#1081;&#1090;&#1080;
+						&#1079;&#1076;&#1077;&#1089;&#1100; &#1095;&#1090;&#1086;-&#1090;&#1086; &#1085;&#1072;
+						&#1089;&#1074;&#1086;&#1081; &#1074;&#1082;&#1091;&#1089;.</p>
+					<p>&#1063;&#1090;&#1086;&#1073;&#1099; &#1085;&#1072;&#1095;&#1072;&#1090;&#1100;
+						&#1080;&#1075;&#1088;&#1072;&#1090;&#1100; &#1085;&#1072; &#1089;&#1072;&#1081;&#1090;&#1077;,
+						&#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086;
+						&#1079;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1090;&#1100;&#1089;&#1103;
+						&#1080; &#1087;&#1086;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1100; &#1089;&#1074;&#1086;&#1081;
+						&#1089;&#1095;&#1077;&#1090;. &#1044;&#1083;&#1103; &#1101;&#1090;&#1086;&#1075;&#1086;
+						&#1089;&#1083;&#1077;&#1076;&#1091;&#1081;&#1090;&#1077; &#1087;&#1088;&#1086;&#1089;&#1090;&#1099;&#1084;
+						&#1080;&#1085;&#1089;&#1090;&#1088;&#1091;&#1082;&#1094;&#1080;&#1103;&#1084; &#1085;&#1072;
+						&#1089;&#1072;&#1081;&#1090;&#1077;. &#1050;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;
+						&#1087;&#1088;&#1077;&#1076;&#1083;&#1072;&#1075;&#1072;&#1077;&#1090; &#1089;&#1074;&#1086;&#1080;&#1084;
+						&#1080;&#1075;&#1088;&#1086;&#1082;&#1072;&#1084;
+						&#1088;&#1072;&#1079;&#1083;&#1080;&#1095;&#1085;&#1099;&#1077;
+						&#1092;&#1086;&#1088;&#1084;&#1072;&#1090;&#1099; &#1073;&#1086;&#1085;&#1091;&#1089;&#1086;&#1074;,
+						&#1072;&#1082;&#1094;&#1080;&#1080; &#1080; &#1088;&#1086;&#1079;&#1099;&#1075;&#1088;&#1099;&#1096;&#1080;,
+						&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077; &#1087;&#1086;&#1084;&#1086;&#1075;&#1072;&#1102;&#1090;
+						&#1087;&#1088;&#1080;&#1091;&#1084;&#1085;&#1086;&#1078;&#1072;&#1090;&#1100; &#1089;&#1074;&#1086;&#1081;
+						&#1082;&#1072;&#1087;&#1080;&#1090;&#1072;&#1083; &#1080;
+						&#1087;&#1086;&#1083;&#1091;&#1095;&#1072;&#1090;&#1100;
+						&#1076;&#1086;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1077;
+						&#1074;&#1086;&#1079;&#1084;&#1086;&#1078;&#1085;&#1086;&#1089;&#1090;&#1080; &#1076;&#1083;&#1103;
+						&#1080;&#1075;&#1088;&#1099;.</p>
+					<p>&#1054;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1089;&#1072;&#1081;&#1090;
+						&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061; &#1080;&#1084;&#1077;&#1077;&#1090;
+						&#1083;&#1080;&#1094;&#1077;&#1085;&#1079;&#1080;&#1102;, &#1095;&#1090;&#1086;
+						&#1075;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1088;&#1091;&#1077;&#1090;
+						&#1073;&#1077;&#1079;&#1086;&#1087;&#1072;&#1089;&#1085;&#1086;&#1089;&#1090;&#1100; &#1080;
+						&#1085;&#1072;&#1076;&#1077;&#1078;&#1085;&#1086;&#1089;&#1090;&#1100; &#1080;&#1075;&#1088;&#1099;
+						&#1085;&#1072; &#1101;&#1090;&#1086;&#1084; &#1087;&#1086;&#1088;&#1090;&#1072;&#1083;&#1077;.</p>
+					<h2><span id="i-2">&#1056;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1103; &#1080;
+							&#1074;&#1093;&#1086;&#1076; &#1074; &#1072;&#1082;&#1082;&#1072;&#1091;&#1085;&#1090;
+							&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1048;&#1082;&#1089;</span></h2>
+					<p>&#1044;&#1083;&#1103; &#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1080;
+						&#1085;&#1072; &#1089;&#1072;&#1081;&#1090;&#1077; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086;
+						&#1048;&#1082;&#1089; &#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086;
+						&#1087;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1085;&#1072; &#1077;&#1075;&#1086;
+						&#1086;&#1092;&#1080;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081; &#1089;&#1072;&#1081;&#1090;
+						&#1080; &#1085;&#1072;&#1078;&#1072;&#1090;&#1100; &#1085;&#1072; &#1082;&#1085;&#1086;&#1087;&#1082;&#1091;
+						&laquo;&#1056;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1103;&raquo;
+						(&#1086;&#1073;&#1099;&#1095;&#1085;&#1086; &#1086;&#1085;&#1072;
+						&#1085;&#1072;&#1093;&#1086;&#1076;&#1080;&#1090;&#1089;&#1103; &#1074;
+						&#1087;&#1088;&#1072;&#1074;&#1086;&#1084; &#1074;&#1077;&#1088;&#1093;&#1085;&#1077;&#1084;
+						&#1091;&#1075;&#1083;&#1091;). &#1044;&#1072;&#1083;&#1077;&#1077; &#1085;&#1091;&#1078;&#1085;&#1086;
+						&#1079;&#1072;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1100; &#1074;&#1089;&#1077;
+						&#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1099;&#1077; &#1087;&#1086;&#1083;&#1103;,
+						&#1091;&#1082;&#1072;&#1079;&#1072;&#1074; &#1089;&#1074;&#1086;&#1081;
+						&#1101;&#1083;&#1077;&#1082;&#1090;&#1088;&#1086;&#1085;&#1085;&#1099;&#1081;
+						&#1072;&#1076;&#1088;&#1077;&#1089;, &#1083;&#1086;&#1075;&#1080;&#1085; &#1080;
+						&#1087;&#1072;&#1088;&#1086;&#1083;&#1100;. &#1055;&#1086;&#1089;&#1083;&#1077;
+						&#1079;&#1072;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1103; &#1074;&#1089;&#1077;&#1093;
+						&#1087;&#1086;&#1083;&#1077;&#1081; &#1085;&#1091;&#1078;&#1085;&#1086;
+						&#1087;&#1086;&#1076;&#1090;&#1074;&#1077;&#1088;&#1076;&#1080;&#1090;&#1100; &#1089;&#1074;&#1086;&#1102;
+						&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1102;,
+						&#1089;&#1083;&#1077;&#1076;&#1091;&#1103;
+						&#1080;&#1085;&#1089;&#1090;&#1088;&#1091;&#1082;&#1094;&#1080;&#1103;&#1084; &#1085;&#1072;
+						&#1089;&#1072;&#1081;&#1090;&#1077;.</p>
+					<p>&#1045;&#1089;&#1083;&#1080; &#1091; &#1074;&#1072;&#1089; &#1091;&#1078;&#1077;
+						&#1077;&#1089;&#1090;&#1100; &#1072;&#1082;&#1082;&#1072;&#1091;&#1085;&#1090; &#1085;&#1072;
+						&#1089;&#1072;&#1081;&#1090;&#1077; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1048;&#1082;&#1089;,
+						&#1090;&#1086; &#1074;&#1072;&#1084; &#1085;&#1091;&#1078;&#1085;&#1086;
+						&#1085;&#1072;&#1078;&#1072;&#1090;&#1100; &#1085;&#1072; &#1082;&#1085;&#1086;&#1087;&#1082;&#1091;
+						&laquo;&#1042;&#1093;&#1086;&#1076;&raquo; &#1080; &#1074;&#1074;&#1077;&#1089;&#1090;&#1080;
+						&#1089;&#1074;&#1086;&#1080; &#1076;&#1072;&#1085;&#1085;&#1099;&#1077;: &#1083;&#1086;&#1075;&#1080;&#1085;
+						&#1080; &#1087;&#1072;&#1088;&#1086;&#1083;&#1100;. &#1045;&#1089;&#1083;&#1080;
+						&#1076;&#1072;&#1085;&#1085;&#1099;&#1077; &#1074;&#1074;&#1077;&#1076;&#1077;&#1085;&#1099;
+						&#1087;&#1088;&#1072;&#1074;&#1080;&#1083;&#1100;&#1085;&#1086;, &#1090;&#1086; &#1074;&#1099;
+						&#1087;&#1086;&#1087;&#1072;&#1076;&#1077;&#1090;&#1077; &#1085;&#1072; &#1089;&#1074;&#1086;&#1102;
+						&#1083;&#1080;&#1095;&#1085;&#1091;&#1102; &#1089;&#1090;&#1088;&#1072;&#1085;&#1080;&#1094;&#1091;
+						&#1085;&#1072; &#1089;&#1072;&#1081;&#1090;&#1077; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086;.</p>
+					<p>&#1054;&#1073;&#1088;&#1072;&#1090;&#1080;&#1090;&#1077;
+						&#1074;&#1085;&#1080;&#1084;&#1072;&#1085;&#1080;&#1077;, &#1095;&#1090;&#1086; &#1087;&#1088;&#1080;
+						&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1080; &#1085;&#1072;
+						&#1089;&#1072;&#1081;&#1090;&#1077; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1048;&#1082;&#1089;
+						&#1085;&#1091;&#1078;&#1085;&#1086; &#1091;&#1082;&#1072;&#1079;&#1072;&#1090;&#1100;
+						&#1088;&#1077;&#1072;&#1083;&#1100;&#1085;&#1099;&#1077; &#1076;&#1072;&#1085;&#1085;&#1099;&#1077;,
+						&#1090;&#1072;&#1082; &#1082;&#1072;&#1082; &#1074;
+						&#1076;&#1072;&#1083;&#1100;&#1085;&#1077;&#1081;&#1096;&#1077;&#1084; &#1086;&#1085;&#1080;
+						&#1073;&#1091;&#1076;&#1091;&#1090;
+						&#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1100;&#1089;&#1103;
+						&#1076;&#1083;&#1103; &#1074;&#1077;&#1088;&#1080;&#1092;&#1080;&#1082;&#1072;&#1094;&#1080;&#1080;
+						&#1072;&#1082;&#1082;&#1072;&#1091;&#1085;&#1090;&#1072; &#1080; &#1074;&#1099;&#1074;&#1086;&#1076;&#1072;
+						&#1074;&#1099;&#1080;&#1075;&#1088;&#1099;&#1096;&#1077;&#1081;. &#1050;&#1088;&#1086;&#1084;&#1077;
+						&#1090;&#1086;&#1075;&#1086;, &#1087;&#1088;&#1080;
+						&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1080; &#1085;&#1072;
+						&#1089;&#1072;&#1081;&#1090;&#1077; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1048;&#1082;&#1089;
+						&#1085;&#1091;&#1078;&#1085;&#1086;
+						&#1089;&#1086;&#1075;&#1083;&#1072;&#1089;&#1080;&#1090;&#1100;&#1089;&#1103; &#1089;
+						&#1087;&#1088;&#1072;&#1074;&#1080;&#1083;&#1072;&#1084;&#1080; &#1080;
+						&#1091;&#1089;&#1083;&#1086;&#1074;&#1080;&#1103;&#1084;&#1080;
+						&#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;
+						&#1089;&#1072;&#1081;&#1090;&#1072;.</p>
+					<h2><span id="__Casino_X">&#1042;&#1089;&#1077; &#1073;&#1086;&#1085;&#1091;&#1089;&#1099; &#1086;&#1090;
+							Casino X</span></h2>
+					<p>Casino X &#1087;&#1088;&#1077;&#1076;&#1083;&#1072;&#1075;&#1072;&#1077;&#1090;
+						&#1089;&#1074;&#1086;&#1080;&#1084; &#1080;&#1075;&#1088;&#1086;&#1082;&#1072;&#1084;
+						&#1088;&#1072;&#1079;&#1083;&#1080;&#1095;&#1085;&#1099;&#1077; &#1073;&#1086;&#1085;&#1091;&#1089;&#1099;
+						&#1080; &#1072;&#1082;&#1094;&#1080;&#1080;, &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077;
+						&#1087;&#1086;&#1084;&#1086;&#1075;&#1072;&#1102;&#1090;
+						&#1087;&#1088;&#1080;&#1091;&#1084;&#1085;&#1086;&#1078;&#1072;&#1090;&#1100;
+						&#1074;&#1099;&#1080;&#1075;&#1088;&#1099;&#1096; &#1080;
+						&#1087;&#1086;&#1083;&#1091;&#1095;&#1072;&#1090;&#1100;
+						&#1076;&#1086;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1077;
+						&#1074;&#1086;&#1079;&#1084;&#1086;&#1078;&#1085;&#1086;&#1089;&#1090;&#1080; &#1076;&#1083;&#1103;
+						&#1080;&#1075;&#1088;&#1099;. &#1053;&#1080;&#1078;&#1077;
+						&#1087;&#1077;&#1088;&#1077;&#1095;&#1080;&#1089;&#1083;&#1077;&#1085;&#1099; &#1074;&#1089;&#1077;
+						&#1073;&#1086;&#1085;&#1091;&#1089;&#1099;, &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077;
+						&#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099; &#1085;&#1072; &#1089;&#1072;&#1081;&#1090;&#1077;
+						Casino X:</p>
+					<ul>
+						<li>&#1041;&#1086;&#1085;&#1091;&#1089; &#1085;&#1072; &#1087;&#1077;&#1088;&#1074;&#1099;&#1081;
+							&#1076;&#1077;&#1087;&#1086;&#1079;&#1080;&#1090;. &#1055;&#1088;&#1080;
+							&#1087;&#1077;&#1088;&#1074;&#1086;&#1084;
+							&#1087;&#1086;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1080; &#1089;&#1095;&#1077;&#1090;&#1072;
+							&#1080;&#1075;&#1088;&#1086;&#1082;&#1080; &#1084;&#1086;&#1075;&#1091;&#1090;
+							&#1087;&#1086;&#1083;&#1091;&#1095;&#1080;&#1090;&#1100;
+							&#1076;&#1086;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1081;
+							&#1073;&#1086;&#1085;&#1091;&#1089; &#1074; &#1088;&#1072;&#1079;&#1084;&#1077;&#1088;&#1077;
+							&#1076;&#1086; 200% &#1086;&#1090; &#1089;&#1091;&#1084;&#1084;&#1099;
+							&#1076;&#1077;&#1087;&#1086;&#1079;&#1080;&#1090;&#1072;.</li>
+						<li>&#1041;&#1077;&#1089;&#1087;&#1083;&#1072;&#1090;&#1085;&#1099;&#1077;
+							&#1074;&#1088;&#1072;&#1097;&#1077;&#1085;&#1080;&#1103;. &#1048;&#1075;&#1088;&#1086;&#1082;&#1080;
+							&#1084;&#1086;&#1075;&#1091;&#1090; &#1087;&#1086;&#1083;&#1091;&#1095;&#1080;&#1090;&#1100;
+							&#1073;&#1077;&#1089;&#1087;&#1083;&#1072;&#1090;&#1085;&#1099;&#1077;
+							&#1074;&#1088;&#1072;&#1097;&#1077;&#1085;&#1080;&#1103; &#1085;&#1072;
+							&#1089;&#1083;&#1086;&#1090;&#1072;&#1093;, &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077;
+							&#1087;&#1086;&#1079;&#1074;&#1086;&#1083;&#1103;&#1102;&#1090;
+							&#1074;&#1099;&#1080;&#1075;&#1088;&#1099;&#1074;&#1072;&#1090;&#1100;
+							&#1088;&#1077;&#1072;&#1083;&#1100;&#1085;&#1099;&#1077; &#1076;&#1077;&#1085;&#1100;&#1075;&#1080;.</li>
+						<li>&#1050;&#1101;&#1096;&#1073;&#1101;&#1082;. Casino X
+							&#1087;&#1088;&#1077;&#1076;&#1083;&#1072;&#1075;&#1072;&#1077;&#1090; &#1089;&#1074;&#1086;&#1080;&#1084;
+							&#1080;&#1075;&#1088;&#1086;&#1082;&#1072;&#1084; &#1082;&#1101;&#1096;&#1073;&#1101;&#1082;
+							&#1076;&#1086; 10% &#1086;&#1090; &#1086;&#1073;&#1097;&#1077;&#1081; &#1089;&#1091;&#1084;&#1084;&#1099;
+							&#1087;&#1086;&#1090;&#1088;&#1072;&#1095;&#1077;&#1085;&#1085;&#1099;&#1093;
+							&#1089;&#1088;&#1077;&#1076;&#1089;&#1090;&#1074; &#1079;&#1072;
+							&#1085;&#1077;&#1076;&#1077;&#1083;&#1102;.</li>
+						<li>&#1058;&#1091;&#1088;&#1085;&#1080;&#1088;&#1099; &#1080;
+							&#1083;&#1086;&#1090;&#1077;&#1088;&#1077;&#1080;. &#1053;&#1072; &#1089;&#1072;&#1081;&#1090;&#1077;
+							Casino X &#1087;&#1088;&#1086;&#1074;&#1086;&#1076;&#1103;&#1090;&#1089;&#1103;
+							&#1090;&#1091;&#1088;&#1085;&#1080;&#1088;&#1099; &#1080;
+							&#1083;&#1086;&#1090;&#1077;&#1088;&#1077;&#1080;, &#1074;
+							&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1093; &#1080;&#1075;&#1088;&#1086;&#1082;&#1080;
+							&#1084;&#1086;&#1075;&#1091;&#1090; &#1074;&#1099;&#1080;&#1075;&#1088;&#1072;&#1090;&#1100;
+							&#1087;&#1088;&#1080;&#1079;&#1099; &#1080; &#1076;&#1077;&#1085;&#1077;&#1078;&#1085;&#1099;&#1077;
+							&#1074;&#1086;&#1079;&#1085;&#1072;&#1075;&#1088;&#1072;&#1078;&#1076;&#1077;&#1085;&#1080;&#1103;.</li>
+						<li>&#1041;&#1086;&#1085;&#1091;&#1089;&#1099; &#1085;&#1072;
+							&#1076;&#1077;&#1087;&#1086;&#1079;&#1080;&#1090;&#1099;. Casino X
+							&#1088;&#1077;&#1075;&#1091;&#1083;&#1103;&#1088;&#1085;&#1086;
+							&#1087;&#1088;&#1077;&#1076;&#1083;&#1072;&#1075;&#1072;&#1077;&#1090; &#1089;&#1074;&#1086;&#1080;&#1084;
+							&#1080;&#1075;&#1088;&#1086;&#1082;&#1072;&#1084; &#1073;&#1086;&#1085;&#1091;&#1089;&#1099;
+							&#1085;&#1072; &#1087;&#1086;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1077;
+							&#1089;&#1095;&#1077;&#1090;&#1072;, &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077;
+							&#1084;&#1086;&#1075;&#1091;&#1090; &#1076;&#1086;&#1089;&#1090;&#1080;&#1075;&#1072;&#1090;&#1100;
+							&#1076;&#1086; 150% &#1086;&#1090; &#1089;&#1091;&#1084;&#1084;&#1099;
+							&#1076;&#1077;&#1087;&#1086;&#1079;&#1080;&#1090;&#1072;.</li>
+						<li>&#1055;&#1088;&#1080;&#1079;&#1099; &#1079;&#1072;
+							&#1074;&#1099;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1077;
+							&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1081;. &#1053;&#1072; &#1089;&#1072;&#1081;&#1090;&#1077;
+							Casino X &#1080;&#1075;&#1088;&#1086;&#1082;&#1080; &#1084;&#1086;&#1075;&#1091;&#1090;
+							&#1087;&#1086;&#1083;&#1091;&#1095;&#1072;&#1090;&#1100; &#1087;&#1088;&#1080;&#1079;&#1099; &#1080;
+							&#1073;&#1086;&#1085;&#1091;&#1089;&#1099; &#1079;&#1072;
+							&#1074;&#1099;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1077;
+							&#1088;&#1072;&#1079;&#1083;&#1080;&#1095;&#1085;&#1099;&#1093;
+							&#1079;&#1072;&#1076;&#1072;&#1085;&#1080;&#1081;.</li>
+						<li>VIP-&#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1072;. Casino X
+							&#1080;&#1084;&#1077;&#1077;&#1090; VIP-&#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1091;,
+							&#1082;&#1086;&#1090;&#1086;&#1088;&#1072;&#1103;
+							&#1087;&#1088;&#1077;&#1076;&#1086;&#1089;&#1090;&#1072;&#1074;&#1083;&#1103;&#1077;&#1090;
+							&#1080;&#1075;&#1088;&#1086;&#1082;&#1072;&#1084;
+							&#1076;&#1086;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1077;
+							&#1087;&#1088;&#1080;&#1074;&#1080;&#1083;&#1077;&#1075;&#1080;&#1080; &#1080;
+							&#1073;&#1086;&#1085;&#1091;&#1089;&#1099;.</li>
+					</ul>
+					<p>&#1050;&#1072;&#1078;&#1076;&#1099;&#1081; &#1073;&#1086;&#1085;&#1091;&#1089;
+						&#1080;&#1084;&#1077;&#1077;&#1090; &#1089;&#1074;&#1086;&#1080;
+						&#1091;&#1089;&#1083;&#1086;&#1074;&#1080;&#1103; &#1080;
+						&#1090;&#1088;&#1077;&#1073;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103; &#1087;&#1086;
+						&#1086;&#1090;&#1099;&#1075;&#1088;&#1099;&#1096;&#1091;, &#1087;&#1086;&#1101;&#1090;&#1086;&#1084;&#1091;
+						&#1087;&#1077;&#1088;&#1077;&#1076; &#1072;&#1082;&#1090;&#1080;&#1074;&#1072;&#1094;&#1080;&#1077;&#1081;
+						&#1073;&#1086;&#1085;&#1091;&#1089;&#1072;
+						&#1087;&#1088;&#1086;&#1095;&#1080;&#1090;&#1072;&#1081;&#1090;&#1077; &#1082;&#1072;&#1082; &#1080;
+						&#1082;&#1086;&#1075;&#1076;&#1072; &#1085;&#1091;&#1078;&#1085;&#1086; &#1077;&#1075;&#1086;
+						&#1087;&#1088;&#1072;&#1074;&#1080;&#1083;&#1100;&#1085;&#1086;
+						&#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1100;.</p>
+					<div class="table-wrapper">
+						<table>
+							<tbody>
+								<tr>
+									<th>&#127873; &#1053;&#1072;&#1079;&#1074;&#1072;&#1085;&#1080;&#1077;
+										&#1073;&#1086;&#1085;&#1091;&#1089;&#1072;</th>
+									<th>&#129297; &#1056;&#1072;&#1079;&#1084;&#1077;&#1088; &#1073;&#1086;&#1085;&#1091;&#1089;&#1072;
+									</th>
+									<th>&#128184; &#1052;&#1080;&#1085;&#1080;&#1084;&#1072;&#1083;&#1100;&#1085;&#1099;&#1081;
+										&#1076;&#1077;&#1087;&#1086;&#1079;&#1080;&#1090;</th>
+									<th>&#128176; &#1052;&#1072;&#1082;&#1089;. &#1089;&#1091;&#1084;&#1084;&#1072;
+										&#1073;&#1086;&#1085;&#1091;&#1089;&#1072;</th>
+									<th>&#127922; &#1042;&#1077;&#1081;&#1076;&#1078;&#1077;&#1088;</th>
+								</tr>
+								<tr>
+									<td>&#127873;
+										&#1055;&#1088;&#1080;&#1074;&#1077;&#1090;&#1089;&#1090;&#1074;&#1077;&#1085;&#1085;&#1099;&#1081;
+										&#1073;&#1086;&#1085;&#1091;&#1089;</td>
+									<td>&#1076;&#1086; +200% &#1080; &#1076;&#1086; 200
+										&#1092;&#1088;&#1080;&#1089;&#1087;&#1080;&#1085;&#1086;&#1074;</td>
+									<td>700 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>100 000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>x25</td>
+								</tr>
+								<tr>
+									<td>&#127873; &#1041;&#1086;&#1085;&#1091;&#1089;&#1099; &#1085;&#1072;
+										&#1076;&#1077;&#1087;&#1086;&#1079;&#1080;&#1090;</td>
+									<td>50% &mdash; 100%</td>
+									<td>700 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>50 000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>x25</td>
+								</tr>
+								<tr>
+									<td>&#128260; &#1060;&#1088;&#1080;&#1089;&#1087;&#1080;&#1085;&#1099;</td>
+									<td>10 &mdash; 50 &#1073;&#1077;&#1089;&#1087;&#1083;&#1072;&#1090;&#1085;&#1099;&#1093;
+										&#1092;&#1088;&#1080;&#1089;&#1087;&#1080;&#1085;&#1086;&#1074;</td>
+									<td>&#1053;&#1077;&#1090;</td>
+									<td>&#1053;&#1077;&#1090;</td>
+									<td>x20</td>
+								</tr>
+								<tr>
+									<td>&#127873; &#1041;&#1086;&#1085;&#1091;&#1089;&#1099; &#1085;&#1072;
+										&#1074;&#1099;&#1093;&#1086;&#1076;&#1085;&#1099;&#1077;</td>
+									<td>50% &mdash; 100%</td>
+									<td>700 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>50 000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>x25</td>
+								</tr>
+								<tr>
+									<td>&#127873; &#1045;&#1078;&#1077;&#1085;&#1077;&#1076;&#1077;&#1083;&#1100;&#1085;&#1099;&#1077;
+										&#1073;&#1086;&#1085;&#1091;&#1089;&#1099;</td>
+									<td>50% &mdash; 100%</td>
+									<td>700 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>50 000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>x25</td>
+								</tr>
+								<tr>
+									<td>&#129351; &#1055;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1072;
+										&#1083;&#1086;&#1103;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080;</td>
+									<td>&#1041;&#1086;&#1085;&#1091;&#1089;&#1099; &#1079;&#1072;
+										&#1082;&#1072;&#1078;&#1076;&#1091;&#1102; &#1089;&#1090;&#1072;&#1074;&#1082;&#1091;</td>
+									<td>&#1053;&#1077;&#1090;</td>
+									<td>&#1053;&#1077;&#1090;</td>
+									<td>&#1054;&#1090;&#1089;&#1091;&#1090;&#1089;&#1090;&#1074;&#1091;&#1077;&#1090;</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h2><span id="__Casino_X-2">&#1058;&#1080;&#1087;&#1099; &#1080;&#1075;&#1088;&#1086;&#1074;&#1099;&#1093;
+							&#1072;&#1074;&#1090;&#1086;&#1084;&#1072;&#1090;&#1086;&#1074; &#1074; Casino X</span></h2>
+					<p>&#1053;&#1072; &#1089;&#1072;&#1081;&#1090;&#1077; Casino X &#1074;&#1099;
+						&#1085;&#1072;&#1081;&#1076;&#1077;&#1090;&#1077; &#1086;&#1075;&#1088;&#1086;&#1084;&#1085;&#1099;&#1081;
+						&#1074;&#1099;&#1073;&#1086;&#1088; &#1080;&#1075;&#1088;&#1086;&#1074;&#1099;&#1093;
+						&#1072;&#1074;&#1090;&#1086;&#1084;&#1072;&#1090;&#1086;&#1074;,
+						&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077; &#1087;&#1086;&#1076;&#1093;&#1086;&#1076;&#1103;&#1090;
+						&#1076;&#1083;&#1103; &#1088;&#1072;&#1079;&#1085;&#1099;&#1093;
+						&#1082;&#1072;&#1090;&#1077;&#1075;&#1086;&#1088;&#1080;&#1081;
+						&#1080;&#1075;&#1088;&#1086;&#1082;&#1086;&#1074;. &#1053;&#1080;&#1078;&#1077;
+						&#1087;&#1077;&#1088;&#1077;&#1095;&#1080;&#1089;&#1083;&#1077;&#1085;&#1099; &#1090;&#1080;&#1087;&#1099;
+						&#1080;&#1075;&#1088;&#1086;&#1074;&#1099;&#1093;
+						&#1072;&#1074;&#1090;&#1086;&#1084;&#1072;&#1090;&#1086;&#1074;,
+						&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077; &#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;
+						&#1085;&#1072; &#1089;&#1072;&#1081;&#1090;&#1077;:</p>
+					<ul>
+						<li>&#1050;&#1083;&#1072;&#1089;&#1089;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077;
+							&#1089;&#1083;&#1086;&#1090;&#1099;. &#1069;&#1090;&#1086;
+							&#1090;&#1088;&#1072;&#1076;&#1080;&#1094;&#1080;&#1086;&#1085;&#1085;&#1099;&#1077;
+							&#1080;&#1075;&#1088;&#1086;&#1074;&#1099;&#1077; &#1072;&#1074;&#1090;&#1086;&#1084;&#1072;&#1090;&#1099;
+							&#1089; &#1090;&#1088;&#1077;&#1084;&#1103;
+							&#1073;&#1072;&#1088;&#1072;&#1073;&#1072;&#1085;&#1072;&#1084;&#1080; &#1080;
+							&#1086;&#1076;&#1085;&#1086;&#1081; &#1083;&#1080;&#1085;&#1080;&#1077;&#1081;
+							&#1074;&#1099;&#1087;&#1083;&#1072;&#1090;. &#1054;&#1085;&#1080; &#1080;&#1084;&#1077;&#1102;&#1090;
+							&#1087;&#1088;&#1086;&#1089;&#1090;&#1086;&#1081; &#1075;&#1077;&#1081;&#1084;&#1087;&#1083;&#1077;&#1081;
+							&#1080;
+							&#1087;&#1088;&#1080;&#1074;&#1083;&#1077;&#1082;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1081;
+							&#1076;&#1080;&#1079;&#1072;&#1081;&#1085;.</li>
+						<li>&#1042;&#1080;&#1076;&#1077;&#1086; &#1089;&#1083;&#1086;&#1090;&#1099;. &#1069;&#1090;&#1086;
+							&#1089;&#1086;&#1074;&#1088;&#1077;&#1084;&#1077;&#1085;&#1085;&#1099;&#1077;
+							&#1089;&#1083;&#1086;&#1090;&#1099; &#1089; &#1087;&#1103;&#1090;&#1100;&#1102; &#1080;&#1083;&#1080;
+							&#1073;&#1086;&#1083;&#1100;&#1096;&#1080;&#1084;
+							&#1082;&#1086;&#1083;&#1080;&#1095;&#1077;&#1089;&#1090;&#1074;&#1086;&#1084;
+							&#1073;&#1072;&#1088;&#1072;&#1073;&#1072;&#1085;&#1086;&#1074;,
+							&#1084;&#1085;&#1086;&#1078;&#1077;&#1089;&#1090;&#1074;&#1086;&#1084; &#1083;&#1080;&#1085;&#1080;&#1081;
+							&#1074;&#1099;&#1087;&#1083;&#1072;&#1090; &#1080;
+							&#1089;&#1087;&#1077;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1084;&#1080;
+							&#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1072;&#1084;&#1080;,
+							&#1090;&#1072;&#1082;&#1080;&#1084;&#1080; &#1082;&#1072;&#1082;
+							&#1089;&#1082;&#1072;&#1090;&#1090;&#1077;&#1088;&#1099; &#1080;
+							&#1074;&#1072;&#1081;&#1083;&#1076;&#1099;. &#1054;&#1085;&#1080; &#1080;&#1084;&#1077;&#1102;&#1090;
+							&#1073;&#1086;&#1083;&#1077;&#1077; &#1089;&#1083;&#1086;&#1078;&#1085;&#1099;&#1081;
+							&#1075;&#1077;&#1081;&#1084;&#1087;&#1083;&#1077;&#1081; &#1080; &#1073;&#1086;&#1083;&#1077;&#1077;
+							&#1074;&#1099;&#1089;&#1086;&#1082;&#1080;&#1077; &#1096;&#1072;&#1085;&#1089;&#1099; &#1085;&#1072;
+							&#1074;&#1099;&#1080;&#1075;&#1088;&#1099;&#1096;.</li>
+						<li>&#1055;&#1088;&#1086;&#1075;&#1088;&#1077;&#1089;&#1089;&#1080;&#1074;&#1085;&#1099;&#1077;
+							&#1089;&#1083;&#1086;&#1090;&#1099;. &#1069;&#1090;&#1086; &#1089;&#1083;&#1086;&#1090;&#1099;, &#1074;
+							&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1093; &#1076;&#1078;&#1077;&#1082;&#1087;&#1086;&#1090;&#1099;
+							&#1087;&#1086;&#1089;&#1090;&#1086;&#1103;&#1085;&#1085;&#1086; &#1088;&#1072;&#1089;&#1090;&#1091;&#1090;
+							&#1080; &#1084;&#1086;&#1075;&#1091;&#1090;
+							&#1076;&#1086;&#1089;&#1090;&#1080;&#1075;&#1072;&#1090;&#1100;
+							&#1084;&#1080;&#1083;&#1083;&#1080;&#1086;&#1085;&#1086;&#1074;
+							&#1076;&#1086;&#1083;&#1083;&#1072;&#1088;&#1086;&#1074;. &#1064;&#1072;&#1085;&#1089;&#1099;
+							&#1085;&#1072; &#1074;&#1099;&#1080;&#1075;&#1088;&#1099;&#1096;
+							&#1076;&#1078;&#1077;&#1082;&#1087;&#1086;&#1090;&#1072; &#1074; &#1090;&#1072;&#1082;&#1080;&#1093;
+							&#1089;&#1083;&#1086;&#1090;&#1072;&#1093; &#1085;&#1077;&#1074;&#1077;&#1083;&#1080;&#1082;&#1080;,
+							&#1085;&#1086; &#1074;&#1099;&#1080;&#1075;&#1088;&#1099;&#1096; &#1084;&#1086;&#1078;&#1077;&#1090;
+							&#1073;&#1099;&#1090;&#1100; &#1086;&#1075;&#1088;&#1086;&#1084;&#1085;&#1099;&#1084;.</li>
+						<li>&#1048;&#1075;&#1088;&#1086;&#1074;&#1099;&#1077;
+							&#1072;&#1074;&#1090;&#1086;&#1084;&#1072;&#1090;&#1099; &#1089;
+							&#1078;&#1080;&#1074;&#1099;&#1084;&#1080; &#1076;&#1080;&#1083;&#1077;&#1088;&#1072;&#1084;&#1080;.
+							&#1069;&#1090;&#1086; &#1080;&#1075;&#1088;&#1099;, &#1074;
+							&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1093; &#1074;&#1099;
+							&#1084;&#1086;&#1078;&#1077;&#1090;&#1077; &#1080;&#1075;&#1088;&#1072;&#1090;&#1100; &#1089;
+							&#1085;&#1072;&#1089;&#1090;&#1086;&#1103;&#1097;&#1080;&#1084;&#1080;
+							&#1076;&#1080;&#1083;&#1077;&#1088;&#1072;&#1084;&#1080; &#1074;
+							&#1088;&#1077;&#1078;&#1080;&#1084;&#1077; &#1088;&#1077;&#1072;&#1083;&#1100;&#1085;&#1086;&#1075;&#1086;
+							&#1074;&#1088;&#1077;&#1084;&#1077;&#1085;&#1080;. &#1054;&#1085;&#1080;
+							&#1089;&#1086;&#1079;&#1076;&#1072;&#1102;&#1090;
+							&#1072;&#1090;&#1084;&#1086;&#1089;&#1092;&#1077;&#1088;&#1091;
+							&#1085;&#1072;&#1089;&#1090;&#1086;&#1103;&#1097;&#1077;&#1075;&#1086;
+							&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1080;
+							&#1087;&#1086;&#1079;&#1074;&#1086;&#1083;&#1103;&#1102;&#1090;
+							&#1087;&#1086;&#1083;&#1091;&#1095;&#1080;&#1090;&#1100;
+							&#1084;&#1072;&#1082;&#1089;&#1080;&#1084;&#1091;&#1084;
+							&#1091;&#1076;&#1086;&#1074;&#1086;&#1083;&#1100;&#1089;&#1090;&#1074;&#1080;&#1103; &#1086;&#1090;
+							&#1080;&#1075;&#1088;&#1099;.</li>
+						<li>&#1048;&#1075;&#1088;&#1086;&#1074;&#1099;&#1077;
+							&#1072;&#1074;&#1090;&#1086;&#1084;&#1072;&#1090;&#1099; &#1089;
+							&#1090;&#1077;&#1084;&#1072;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1084;&#1080;
+							&#1073;&#1086;&#1085;&#1091;&#1089;&#1072;&#1084;&#1080;. &#1069;&#1090;&#1086;
+							&#1089;&#1083;&#1086;&#1090;&#1099;, &#1074; &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1093;
+							&#1077;&#1089;&#1090;&#1100;
+							&#1090;&#1077;&#1084;&#1072;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;&#1077;
+							&#1073;&#1086;&#1085;&#1091;&#1089;&#1085;&#1099;&#1077; &#1080;&#1075;&#1088;&#1099;,
+							&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077;
+							&#1087;&#1086;&#1079;&#1074;&#1086;&#1083;&#1103;&#1102;&#1090;
+							&#1074;&#1099;&#1080;&#1075;&#1088;&#1072;&#1090;&#1100;
+							&#1076;&#1086;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1077;
+							&#1076;&#1077;&#1085;&#1100;&#1075;&#1080; &#1080;&#1083;&#1080; &#1087;&#1088;&#1080;&#1079;&#1099;.</li>
+					</ul>
+					<p>&#1058;&#1072;&#1082;&#1078;&#1077; &#1077;&#1089;&#1090;&#1100;
+						&#1074;&#1080;&#1088;&#1090;&#1091;&#1072;&#1083;&#1100;&#1085;&#1099;&#1077;
+						&#1085;&#1072;&#1089;&#1090;&#1086;&#1083;&#1100;&#1085;&#1099;&#1077; &#1080;&#1075;&#1088;&#1099;,
+						&#1089;&#1088;&#1077;&#1076;&#1080; &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1093;
+						&#1086;&#1085;&#1083;&#1072;&#1081;&#1085; &#1088;&#1091;&#1083;&#1077;&#1090;&#1082;&#1072;,
+						&#1073;&#1083;&#1077;&#1082;&#1076;&#1078;&#1077;&#1082;, &#1087;&#1086;&#1082;&#1077;&#1088;,
+						&#1082;&#1088;&#1077;&#1087;&#1089; &#1080; &#1073;&#1072;&#1082;&#1082;&#1072;&#1088;&#1072;.</p>
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>&#127920; &#1042;&#1080;&#1076; &#1080;&#1075;&#1088;&#1099;</th>
+									<th>&#127942; &#1050;&#1086;&#1083;-&#1074;&#1086; &#1080;&#1075;&#1088; &#1074; Casino-X</th>
+									<th>&#9889; &#1050;&#1088;&#1072;&#1090;&#1082;&#1086;&#1077;
+										&#1086;&#1087;&#1080;&#1089;&#1072;&#1085;&#1080;&#1077; &#1087;&#1088;&#1072;&#1074;&#1080;&#1083;
+									</th>
+									<th>&#127922; &#1057;&#1088;&#1077;&#1076;&#1085;&#1080;&#1081; RTP</th>
+									<th>&#129351; &#1058;&#1086;&#1087; &#1080;&#1075;&#1088;&#1072;</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>&#127920; &#1057;&#1083;&#1086;&#1090;&#1099;</td>
+									<td>2138</td>
+									<td>&#1048;&#1075;&#1088;&#1086;&#1074;&#1099;&#1077;
+										&#1072;&#1074;&#1090;&#1086;&#1084;&#1072;&#1090;&#1099;, &#1075;&#1076;&#1077;
+										&#1085;&#1091;&#1078;&#1085;&#1086; &#1089;&#1086;&#1073;&#1088;&#1072;&#1090;&#1100;
+										&#1086;&#1087;&#1088;&#1077;&#1076;&#1077;&#1083;&#1077;&#1085;&#1085;&#1091;&#1102;
+										&#1082;&#1086;&#1084;&#1073;&#1080;&#1085;&#1072;&#1094;&#1080;&#1102;
+										&#1089;&#1080;&#1084;&#1074;&#1086;&#1083;&#1086;&#1074; &#1076;&#1083;&#1103;
+										&#1074;&#1099;&#1080;&#1075;&#1088;&#1099;&#1096;&#1072;</td>
+									<td>95%</td>
+									<td>Book of Dead</td>
+								</tr>
+								<tr>
+									<td>&#127920; &#1056;&#1091;&#1083;&#1077;&#1090;&#1082;&#1072;</td>
+									<td>549</td>
+									<td>&#1048;&#1075;&#1088;&#1072; &#1085;&#1072; &#1089;&#1090;&#1086;&#1083;&#1077; &#1089;
+										&#1082;&#1088;&#1091;&#1087;&#1100;&#1077;, &#1075;&#1076;&#1077;
+										&#1085;&#1091;&#1078;&#1085;&#1086; &#1091;&#1075;&#1072;&#1076;&#1072;&#1090;&#1100;,
+										&#1085;&#1072; &#1082;&#1072;&#1082;&#1086;&#1084; &#1085;&#1086;&#1084;&#1077;&#1088;&#1077;
+										&#1080;&#1083;&#1080; &#1094;&#1074;&#1077;&#1090;&#1077;
+										&#1086;&#1089;&#1090;&#1072;&#1085;&#1086;&#1074;&#1080;&#1090;&#1089;&#1103;
+										&#1096;&#1072;&#1088;&#1080;&#1082;</td>
+									<td>97%</td>
+									<td>European Roulette</td>
+								</tr>
+								<tr>
+									<td>&#127920; &#1041;&#1083;&#1101;&#1082;&#1076;&#1078;&#1077;&#1082;</td>
+									<td>57</td>
+									<td>&#1048;&#1075;&#1088;&#1072; &#1085;&#1072; &#1089;&#1090;&#1086;&#1083;&#1077; &#1089;
+										&#1082;&#1088;&#1091;&#1087;&#1100;&#1077;, &#1075;&#1076;&#1077;
+										&#1085;&#1091;&#1078;&#1085;&#1086; &#1089;&#1086;&#1073;&#1088;&#1072;&#1090;&#1100;
+										&#1082;&#1086;&#1084;&#1073;&#1080;&#1085;&#1072;&#1094;&#1080;&#1102; &#1082;&#1072;&#1088;&#1090;,
+										&#1082;&#1086;&#1090;&#1086;&#1088;&#1072;&#1103; &#1073;&#1091;&#1076;&#1077;&#1090;
+										&#1073;&#1083;&#1080;&#1078;&#1077; &#1074;&#1089;&#1077;&#1075;&#1086; &#1082; 21
+										&#1086;&#1095;&#1082;&#1091;</td>
+									<td>99%</td>
+									<td>Blackjack Classic</td>
+								</tr>
+								<tr>
+									<td>&#127920; &#1042;&#1080;&#1076;&#1077;&#1086;&#1087;&#1086;&#1082;&#1077;&#1088;</td>
+									<td>54</td>
+									<td>&#1050;&#1072;&#1088;&#1090;&#1086;&#1095;&#1085;&#1072;&#1103; &#1080;&#1075;&#1088;&#1072;,
+										&#1075;&#1076;&#1077; &#1085;&#1091;&#1078;&#1085;&#1086;
+										&#1089;&#1086;&#1073;&#1088;&#1072;&#1090;&#1100;
+										&#1082;&#1086;&#1084;&#1073;&#1080;&#1085;&#1072;&#1094;&#1080;&#1102; &#1082;&#1072;&#1088;&#1090;,
+										&#1082;&#1086;&#1090;&#1086;&#1088;&#1072;&#1103; &#1073;&#1091;&#1076;&#1077;&#1090;
+										&#1087;&#1086;&#1073;&#1077;&#1076;&#1085;&#1086;&#1081;</td>
+									<td>97%</td>
+									<td>Jacks or Better</td>
+								</tr>
+								<tr>
+									<td>&#127920; Live &#1080;&#1075;&#1088;&#1099;</td>
+									<td>125</td>
+									<td>&#1048;&#1075;&#1088;&#1099; &#1089;
+										&#1085;&#1072;&#1089;&#1090;&#1086;&#1103;&#1097;&#1080;&#1084;
+										&#1082;&#1088;&#1091;&#1087;&#1100;&#1077;, &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077;
+										&#1087;&#1088;&#1086;&#1074;&#1086;&#1076;&#1103;&#1090;&#1089;&#1103; &#1074;
+										&#1088;&#1077;&#1078;&#1080;&#1084;&#1077;
+										&#1088;&#1077;&#1072;&#1083;&#1100;&#1085;&#1086;&#1075;&#1086;
+										&#1074;&#1088;&#1077;&#1084;&#1077;&#1085;&#1080;</td>
+									<td>95%</td>
+									<td>Live Blackjack</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h2><span id="i-3">&#1047;&#1077;&#1088;&#1082;&#1072;&#1083;&#1086;
+							&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;</span></h2>
+					<p>&#1050;&#1072;&#1079;&#1080;&#1085;&#1086; &#1048;&#1082;&#1089; &#1080;&#1084;&#1077;&#1077;&#1090;
+						&#1085;&#1077;&#1089;&#1082;&#1086;&#1083;&#1100;&#1082;&#1086;
+						&#1076;&#1077;&#1089;&#1103;&#1090;&#1082;&#1086;&#1074; &#1088;&#1072;&#1073;&#1086;&#1095;&#1080;&#1093;
+						&#1079;&#1077;&#1088;&#1082;&#1072;&#1083;, &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077;
+						&#1087;&#1086;&#1084;&#1086;&#1075;&#1072;&#1102;&#1090; &#1080;&#1075;&#1088;&#1086;&#1082;&#1072;&#1084;
+						&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1090;&#1100;
+						&#1073;&#1083;&#1086;&#1082;&#1080;&#1088;&#1086;&#1074;&#1082;&#1091; &#1089;&#1072;&#1081;&#1090;&#1072;
+						&#1080; &#1087;&#1088;&#1086;&#1076;&#1086;&#1083;&#1078;&#1072;&#1090;&#1100;
+						&#1080;&#1075;&#1088;&#1072;&#1090;&#1100;. &#1054;&#1076;&#1085;&#1072;&#1082;&#1086;, &#1085;&#1077;
+						&#1074;&#1089;&#1077; &#1079;&#1077;&#1088;&#1082;&#1072;&#1083;&#1072;
+						&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1048;&#1082;&#1089; &#1084;&#1086;&#1075;&#1091;&#1090;
+						&#1073;&#1099;&#1090;&#1100; &#1085;&#1072;&#1076;&#1077;&#1078;&#1085;&#1099;&#1084;&#1080; &#1080;
+						&#1073;&#1077;&#1079;&#1086;&#1087;&#1072;&#1089;&#1085;&#1099;&#1084;&#1080; &#1076;&#1083;&#1103;
+						&#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;,
+						&#1087;&#1086;&#1101;&#1090;&#1086;&#1084;&#1091; &#1087;&#1077;&#1088;&#1077;&#1076; &#1090;&#1077;&#1084;,
+						&#1082;&#1072;&#1082; &#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1100;
+						&#1079;&#1077;&#1088;&#1082;&#1072;&#1083;&#1086;,
+						&#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086;
+						&#1091;&#1073;&#1077;&#1076;&#1080;&#1090;&#1100;&#1089;&#1103; &#1074; &#1077;&#1075;&#1086;
+						&#1087;&#1086;&#1076;&#1083;&#1080;&#1085;&#1085;&#1086;&#1089;&#1090;&#1080;.</p>
+					<p>&#1063;&#1090;&#1086;&#1073;&#1099; &#1085;&#1072;&#1081;&#1090;&#1080;
+						&#1088;&#1072;&#1073;&#1086;&#1095;&#1077;&#1077; &#1079;&#1077;&#1088;&#1082;&#1072;&#1083;&#1086;
+						&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1048;&#1082;&#1089;, &#1084;&#1086;&#1078;&#1085;&#1086;
+						&#1074;&#1086;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1100;&#1089;&#1103;
+						&#1087;&#1086;&#1080;&#1089;&#1082;&#1086;&#1084; &#1074;
+						&#1080;&#1085;&#1090;&#1077;&#1088;&#1085;&#1077;&#1090;&#1077; &#1080;&#1083;&#1080;
+						&#1086;&#1073;&#1088;&#1072;&#1090;&#1080;&#1090;&#1100;&#1089;&#1103; &#1082;
+						&#1090;&#1077;&#1093;&#1085;&#1080;&#1095;&#1077;&#1089;&#1082;&#1086;&#1081;
+						&#1087;&#1086;&#1076;&#1076;&#1077;&#1088;&#1078;&#1082;&#1077; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086;.
+						&#1058;&#1077;&#1093;&#1085;&#1080;&#1095;&#1077;&#1089;&#1082;&#1072;&#1103;
+						&#1087;&#1086;&#1076;&#1076;&#1077;&#1088;&#1078;&#1082;&#1072; &#1074;&#1089;&#1077;&#1075;&#1076;&#1072;
+						&#1075;&#1086;&#1090;&#1086;&#1074;&#1072; &#1087;&#1086;&#1084;&#1086;&#1095;&#1100;
+						&#1080;&#1075;&#1088;&#1086;&#1082;&#1072;&#1084; &#1080;
+						&#1087;&#1088;&#1077;&#1076;&#1086;&#1089;&#1090;&#1072;&#1074;&#1080;&#1090;&#1100;
+						&#1072;&#1082;&#1090;&#1091;&#1072;&#1083;&#1100;&#1085;&#1091;&#1102;
+						&#1080;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1102; &#1086;
+						&#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;&#1093;
+						&#1079;&#1077;&#1088;&#1082;&#1072;&#1083;&#1072;&#1093;. &#1058;&#1072;&#1082;&#1078;&#1077; &#1074;&#1099;
+						&#1084;&#1086;&#1078;&#1077;&#1090;&#1077; &#1087;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1085;&#1072;
+						&#1072;&#1082;&#1090;&#1091;&#1072;&#1083;&#1100;&#1085;&#1086;&#1077;
+						&#1088;&#1072;&#1073;&#1086;&#1095;&#1077;&#1077; &#1079;&#1077;&#1088;&#1082;&#1072;&#1083;&#1086; Casino X
+						&#1087;&#1086; &#1089;&#1089;&#1099;&#1083;&#1082;&#1077; &#1074;
+						&#1074;&#1077;&#1088;&#1093;&#1085;&#1077;&#1081; &#1095;&#1072;&#1089;&#1090;&#1080;
+						&#1085;&#1072;&#1096;&#1077;&#1075;&#1086; &#1089;&#1072;&#1081;&#1090;&#1072;.</p>
+					<h2><span id="i-4">&#1055;&#1086;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1077;
+							&#1089;&#1095;&#1077;&#1090;&#1072; &#1074; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;</span></h2>
+					<p>&#1044;&#1083;&#1103; &#1087;&#1086;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1103;
+						&#1089;&#1095;&#1077;&#1090;&#1072; &#1074; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;
+						&#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086; &#1079;&#1072;&#1081;&#1090;&#1080;
+						&#1074; &#1089;&#1074;&#1086;&#1081; &#1072;&#1082;&#1082;&#1072;&#1091;&#1085;&#1090; &#1080;
+						&#1087;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1085;&#1072;
+						&#1089;&#1090;&#1088;&#1072;&#1085;&#1080;&#1094;&#1091; &laquo;&#1050;&#1072;&#1089;&#1089;&#1072;&raquo;.
+						&#1053;&#1072; &#1101;&#1090;&#1086;&#1081; &#1089;&#1090;&#1088;&#1072;&#1085;&#1080;&#1094;&#1077;
+						&#1074;&#1099; &#1084;&#1086;&#1078;&#1077;&#1090;&#1077; &#1074;&#1099;&#1073;&#1088;&#1072;&#1090;&#1100;
+						&#1086;&#1076;&#1080;&#1085; &#1080;&#1079; &#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;&#1093;
+						&#1089;&#1087;&#1086;&#1089;&#1086;&#1073;&#1086;&#1074;
+						&#1087;&#1086;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1103; &#1089;&#1095;&#1077;&#1090;&#1072;,
+						&#1090;&#1072;&#1082;&#1080;&#1093; &#1082;&#1072;&#1082;
+						&#1073;&#1072;&#1085;&#1082;&#1086;&#1074;&#1089;&#1082;&#1080;&#1077; &#1082;&#1072;&#1088;&#1090;&#1099;,
+						&#1101;&#1083;&#1077;&#1082;&#1090;&#1088;&#1086;&#1085;&#1085;&#1099;&#1077;
+						&#1082;&#1086;&#1096;&#1077;&#1083;&#1100;&#1082;&#1080;,
+						&#1084;&#1086;&#1073;&#1080;&#1083;&#1100;&#1085;&#1099;&#1077;
+						&#1087;&#1083;&#1072;&#1090;&#1077;&#1078;&#1080; &#1080; &#1076;&#1088;&#1091;&#1075;&#1080;&#1077;.</p>
+					<div class="table-wrapper">
+						<table>
+							<tbody>
+								<tr>
+									<th>&#128179; &#1055;&#1083;&#1072;&#1090;&#1077;&#1078;&#1085;&#1072;&#1103;
+										&#1089;&#1080;&#1089;&#1090;&#1077;&#1084;&#1072;</th>
+									<th>&#128260; &#1050;&#1086;&#1084;&#1080;&#1089;&#1089;&#1080;&#1103; &#1079;&#1072;
+										&#1074;&#1099;&#1074;&#1086;&#1076;</th>
+									<th>&#128181; &#1052;&#1080;&#1085;. &#1076;&#1077;&#1087;&#1086;&#1079;&#1080;&#1090;</th>
+									<th>&#128176; &#1052;&#1072;&#1082;&#1089;. &#1074;&#1099;&#1074;&#1086;&#1076;
+										&#1076;&#1077;&#1085;&#1077;&#1075;</th>
+									<th>&#128184; &#1042;&#1088;&#1077;&#1084;&#1103; &#1085;&#1072; &#1074;&#1099;&#1074;&#1086;&#1076;
+										$$$</th>
+								</tr>
+								<tr>
+									<td>&#128182; Visa/Mastercard</td>
+									<td>1%</td>
+									<td>10 USD</td>
+									<td>5 000 USD</td>
+									<td>1-3 &#1088;&#1072;&#1073;&#1086;&#1095;&#1080;&#1093; &#1076;&#1085;&#1103;</td>
+								</tr>
+								<tr>
+									<td>&#128182; Neteller</td>
+									<td>2%</td>
+									<td>20 USD</td>
+									<td>10 000 USD</td>
+									<td>24 &#1095;&#1072;&#1089;&#1072;</td>
+								</tr>
+								<tr>
+									<td>&#128182; Skrill</td>
+									<td>2%</td>
+									<td>20 USD</td>
+									<td>10 000 USD</td>
+									<td>24 &#1095;&#1072;&#1089;&#1072;</td>
+								</tr>
+								<tr>
+									<td>&#128182; WebMoney</td>
+									<td>1%</td>
+									<td>10 WMZ</td>
+									<td>10000 WMZ</td>
+									<td>24 &#1095;&#1072;&#1089;&#1072;</td>
+								</tr>
+								<tr>
+									<td>&#128182; Qiwi</td>
+									<td>2%</td>
+									<td>500 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>300000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>24 &#1095;&#1072;&#1089;&#1072;</td>
+								</tr>
+								<tr>
+									<td>&#128182; &#1071;&#1085;&#1076;&#1077;&#1082;&#1089;.&#1044;&#1077;&#1085;&#1100;&#1075;&#1080;
+									</td>
+									<td>1%</td>
+									<td>300 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>200000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>24 &#1095;&#1072;&#1089;&#1072;</td>
+								</tr>
+								<tr>
+									<td>&#128182; &#1041;&#1072;&#1085;&#1082;&#1086;&#1074;&#1089;&#1082;&#1080;&#1081;
+										&#1087;&#1077;&#1088;&#1077;&#1074;&#1086;&#1076;</td>
+									<td>3%</td>
+									<td>100 USD</td>
+									<td>50 000 USD</td>
+									<td>3-5 &#1088;&#1072;&#1073;&#1086;&#1095;&#1080;&#1093; &#1076;&#1085;&#1077;&#1081;</td>
+								</tr>
+								<tr>
+									<td>&#128182; Bitcoin</td>
+									<td>&#1073;&#1077;&#1079; &#1082;&#1086;&#1084;&#1080;&#1089;&#1089;&#1080;&#1080;</td>
+									<td>0.001 BTC</td>
+									<td>2 BTC &#1079;&#1072; 1 &#1074;&#1099;&#1074;&#1086;&#1076;</td>
+									<td>1-2 &#1095;&#1072;&#1089;&#1072;</td>
+								</tr>
+								<tr>
+									<td>&#128182; &#1050;&#1088;&#1080;&#1087;&#1090;&#1086;&#1074;&#1072;&#1083;&#1102;&#1090;&#1072;
+										USDT</td>
+									<td>&#1073;&#1077;&#1079; &#1082;&#1086;&#1084;&#1080;&#1089;&#1089;&#1080;&#1080;</td>
+									<td>10 USDT</td>
+									<td>20 000 USDT</td>
+									<td>3-5 &#1095;&#1072;&#1089;&#1086;&#1074;</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p>&#1063;&#1090;&#1086;&#1073;&#1099; &#1087;&#1086;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1100;
+						&#1089;&#1095;&#1077;&#1090; &#1085;&#1072; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;,
+						&#1085;&#1091;&#1078;&#1085;&#1086; &#1074;&#1099;&#1073;&#1088;&#1072;&#1090;&#1100;
+						&#1091;&#1076;&#1086;&#1073;&#1085;&#1099;&#1081; &#1076;&#1083;&#1103; &#1074;&#1072;&#1089;
+						&#1089;&#1087;&#1086;&#1089;&#1086;&#1073; &#1086;&#1087;&#1083;&#1072;&#1090;&#1099;,
+						&#1074;&#1074;&#1077;&#1089;&#1090;&#1080;
+						&#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1091;&#1102;
+						&#1089;&#1091;&#1084;&#1084;&#1091; &#1080; &#1089;&#1083;&#1077;&#1076;&#1086;&#1074;&#1072;&#1090;&#1100;
+						&#1080;&#1085;&#1089;&#1090;&#1088;&#1091;&#1082;&#1094;&#1080;&#1103;&#1084; &#1085;&#1072;
+						&#1101;&#1082;&#1088;&#1072;&#1085;&#1077;. &#1054;&#1073;&#1099;&#1095;&#1085;&#1086;,
+						&#1076;&#1077;&#1085;&#1100;&#1075;&#1080; &#1087;&#1086;&#1089;&#1090;&#1091;&#1087;&#1072;&#1102;&#1090;
+						&#1085;&#1072; &#1074;&#1072;&#1096; &#1089;&#1095;&#1077;&#1090; &#1074;
+						&#1090;&#1077;&#1095;&#1077;&#1085;&#1080;&#1077;
+						&#1085;&#1077;&#1089;&#1082;&#1086;&#1083;&#1100;&#1082;&#1080;&#1093; &#1084;&#1080;&#1085;&#1091;&#1090;
+						&#1087;&#1086;&#1089;&#1083;&#1077; &#1090;&#1086;&#1075;&#1086;, &#1082;&#1072;&#1082; &#1074;&#1099;
+						&#1087;&#1088;&#1086;&#1080;&#1079;&#1074;&#1077;&#1083;&#1080; &#1087;&#1083;&#1072;&#1090;&#1077;&#1078;.
+					</p>
+					<p>&#1055;&#1088;&#1080; &#1087;&#1086;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1080;
+						&#1089;&#1095;&#1077;&#1090;&#1072; &#1085;&#1072; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;
+						&#1086;&#1073;&#1103;&#1079;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;
+						&#1091;&#1095;&#1080;&#1090;&#1099;&#1074;&#1072;&#1081;&#1090;&#1077;
+						&#1082;&#1086;&#1084;&#1080;&#1089;&#1089;&#1080;&#1080;, &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077;
+						&#1084;&#1086;&#1075;&#1091;&#1090; &#1073;&#1099;&#1090;&#1100;
+						&#1074;&#1079;&#1080;&#1084;&#1072;&#1077;&#1084;&#1099;&#1084;&#1080;
+						&#1088;&#1072;&#1079;&#1083;&#1080;&#1095;&#1085;&#1099;&#1084;&#1080;
+						&#1087;&#1083;&#1072;&#1090;&#1077;&#1078;&#1085;&#1099;&#1084;&#1080;
+						&#1089;&#1080;&#1089;&#1090;&#1077;&#1084;&#1072;&#1084;&#1080;. &#1058;&#1072;&#1082;&#1078;&#1077;
+						&#1086;&#1073;&#1088;&#1072;&#1090;&#1080;&#1090;&#1077;
+						&#1074;&#1085;&#1080;&#1084;&#1072;&#1085;&#1080;&#1077; &#1085;&#1072;
+						&#1083;&#1080;&#1084;&#1080;&#1090;&#1099; &#1087;&#1086;
+						&#1087;&#1086;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1080;&#1102; &#1089;&#1095;&#1077;&#1090;&#1072;,
+						&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077;
+						&#1091;&#1089;&#1090;&#1072;&#1085;&#1072;&#1074;&#1083;&#1080;&#1074;&#1072;&#1102;&#1090;&#1089;&#1103;
+						&#1088;&#1072;&#1079;&#1083;&#1080;&#1095;&#1085;&#1099;&#1084;&#1080;
+						&#1087;&#1083;&#1072;&#1090;&#1077;&#1078;&#1085;&#1099;&#1084;&#1080;
+						&#1089;&#1080;&#1089;&#1090;&#1077;&#1084;&#1072;&#1084;&#1080; &#1080; &#1084;&#1086;&#1075;&#1091;&#1090;
+						&#1073;&#1099;&#1090;&#1100; &#1088;&#1072;&#1079;&#1085;&#1099;&#1084;&#1080;.</p>
+					<h2><span id="__Casino_X-3">&#1050;&#1072;&#1082; &#1074;&#1099;&#1074;&#1077;&#1089;&#1090;&#1080;
+							&#1074;&#1099;&#1080;&#1075;&#1088;&#1099;&#1096; &#1074; Casino X</span></h2>
+					<p>&#1042;&#1099;&#1074;&#1086;&#1076; &#1074;&#1099;&#1080;&#1075;&#1088;&#1099;&#1096;&#1072; &#1074; Casino
+						X &#1090;&#1072;&#1082;&#1078;&#1077;
+						&#1086;&#1089;&#1091;&#1097;&#1077;&#1089;&#1090;&#1074;&#1083;&#1103;&#1077;&#1090;&#1089;&#1103;
+						&#1095;&#1077;&#1088;&#1077;&#1079; &#1089;&#1090;&#1088;&#1072;&#1085;&#1080;&#1094;&#1091;
+						&laquo;&#1050;&#1072;&#1089;&#1089;&#1072;&raquo;. &#1063;&#1090;&#1086;&#1073;&#1099;
+						&#1074;&#1099;&#1074;&#1077;&#1089;&#1090;&#1080; &#1074;&#1099;&#1080;&#1075;&#1088;&#1099;&#1096;,
+						&#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086;
+						&#1074;&#1099;&#1073;&#1088;&#1072;&#1090;&#1100; &#1086;&#1076;&#1080;&#1085; &#1080;&#1079;
+						&#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;&#1093;
+						&#1089;&#1087;&#1086;&#1089;&#1086;&#1073;&#1086;&#1074; &#1074;&#1099;&#1074;&#1086;&#1076;&#1072; &#1080;
+						&#1089;&#1083;&#1077;&#1076;&#1086;&#1074;&#1072;&#1090;&#1100;
+						&#1080;&#1085;&#1089;&#1090;&#1088;&#1091;&#1082;&#1094;&#1080;&#1103;&#1084; &#1085;&#1072;
+						&#1101;&#1082;&#1088;&#1072;&#1085;&#1077;.</p>
+					<p>&#1053;&#1072; &#1089;&#1072;&#1081;&#1090;&#1077; Casino X
+						&#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;
+						&#1089;&#1083;&#1077;&#1076;&#1091;&#1102;&#1097;&#1080;&#1077;
+						&#1089;&#1087;&#1086;&#1089;&#1086;&#1073;&#1099; &#1074;&#1099;&#1074;&#1086;&#1076;&#1072;
+						&#1089;&#1088;&#1077;&#1076;&#1089;&#1090;&#1074;:
+						&#1073;&#1072;&#1085;&#1082;&#1086;&#1074;&#1089;&#1082;&#1080;&#1081;
+						&#1087;&#1077;&#1088;&#1077;&#1074;&#1086;&#1076;,
+						&#1101;&#1083;&#1077;&#1082;&#1090;&#1088;&#1086;&#1085;&#1085;&#1099;&#1077;
+						&#1082;&#1086;&#1096;&#1077;&#1083;&#1100;&#1082;&#1080;,
+						&#1084;&#1086;&#1073;&#1080;&#1083;&#1100;&#1085;&#1099;&#1077;
+						&#1087;&#1083;&#1072;&#1090;&#1077;&#1078;&#1080;,
+						&#1073;&#1072;&#1085;&#1082;&#1086;&#1074;&#1089;&#1082;&#1080;&#1077; &#1082;&#1072;&#1088;&#1090;&#1099;
+						&#1080; &#1076;&#1088;&#1091;&#1075;&#1080;&#1077;. &#1054;&#1073;&#1088;&#1072;&#1090;&#1080;&#1090;&#1077;
+						&#1074;&#1085;&#1080;&#1084;&#1072;&#1085;&#1080;&#1077;, &#1095;&#1090;&#1086;
+						&#1085;&#1077;&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077;
+						&#1089;&#1087;&#1086;&#1089;&#1086;&#1073;&#1099; &#1074;&#1099;&#1074;&#1086;&#1076;&#1072;
+						&#1084;&#1086;&#1075;&#1091;&#1090; &#1073;&#1099;&#1090;&#1100;
+						&#1085;&#1077;&#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099; &#1074;
+						&#1074;&#1072;&#1096;&#1077;&#1081; &#1089;&#1090;&#1088;&#1072;&#1085;&#1077;.</p>
+					<p>&#1050;&#1088;&#1086;&#1084;&#1077; &#1090;&#1086;&#1075;&#1086;, &#1074;&#1072;&#1078;&#1085;&#1086;
+						&#1091;&#1095;&#1080;&#1090;&#1099;&#1074;&#1072;&#1090;&#1100; &#1083;&#1080;&#1084;&#1080;&#1090;&#1099;
+						&#1087;&#1086; &#1074;&#1099;&#1074;&#1086;&#1076;&#1091; &#1089;&#1088;&#1077;&#1076;&#1089;&#1090;&#1074;,
+						&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077;
+						&#1091;&#1089;&#1090;&#1072;&#1085;&#1072;&#1074;&#1083;&#1080;&#1074;&#1072;&#1102;&#1090;&#1089;&#1103;
+						&#1085;&#1072; &#1089;&#1072;&#1081;&#1090;&#1077; Casino X &#1080;
+						&#1079;&#1072;&#1074;&#1080;&#1089;&#1103;&#1090; &#1086;&#1090;
+						&#1074;&#1099;&#1073;&#1088;&#1072;&#1085;&#1085;&#1086;&#1075;&#1086; &#1074;&#1072;&#1084;&#1080;
+						&#1084;&#1077;&#1090;&#1086;&#1076;&#1072; &#1074;&#1099;&#1074;&#1086;&#1076;&#1072;.
+						&#1054;&#1073;&#1099;&#1095;&#1085;&#1086;, &#1085;&#1072; &#1089;&#1072;&#1081;&#1090;&#1077;
+						&#1091;&#1082;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1090;&#1089;&#1103;
+						&#1084;&#1080;&#1085;&#1080;&#1084;&#1072;&#1083;&#1100;&#1085;&#1072;&#1103; &#1080;
+						&#1084;&#1072;&#1082;&#1089;&#1080;&#1084;&#1072;&#1083;&#1100;&#1085;&#1072;&#1103;
+						&#1089;&#1091;&#1084;&#1084;&#1072; &#1074;&#1099;&#1074;&#1086;&#1076;&#1072;.
+						&#1063;&#1090;&#1086;&#1073;&#1099; &#1080;&#1079;&#1073;&#1077;&#1078;&#1072;&#1090;&#1100;
+						&#1079;&#1072;&#1076;&#1077;&#1088;&#1078;&#1077;&#1082; &#1074; &#1074;&#1099;&#1074;&#1086;&#1076;&#1077;
+						&#1089;&#1088;&#1077;&#1076;&#1089;&#1090;&#1074;,
+						&#1091;&#1073;&#1077;&#1076;&#1080;&#1090;&#1077;&#1089;&#1100;, &#1095;&#1090;&#1086;
+						&#1074;&#1072;&#1096;&#1080; &#1076;&#1072;&#1085;&#1085;&#1099;&#1077; &#1085;&#1072;
+						&#1089;&#1072;&#1081;&#1090;&#1077; Casino X &#1087;&#1086;&#1083;&#1085;&#1086;&#1089;&#1090;&#1100;&#1102;
+						&#1079;&#1072;&#1087;&#1086;&#1083;&#1085;&#1077;&#1085;&#1099; &#1080; &#1074;&#1077;&#1088;&#1085;&#1099;.
+						&#1058;&#1072;&#1082;&#1078;&#1077;, &#1077;&#1089;&#1083;&#1080; &#1074;&#1099;
+						&#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1091;&#1077;&#1090;&#1077;
+						&#1073;&#1086;&#1085;&#1091;&#1089;&#1085;&#1099;&#1077;
+						&#1089;&#1088;&#1077;&#1076;&#1089;&#1090;&#1074;&#1072;,
+						&#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086;
+						&#1074;&#1099;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1100;
+						&#1091;&#1089;&#1083;&#1086;&#1074;&#1080;&#1103; &#1087;&#1086; &#1080;&#1093;
+						&#1086;&#1090;&#1099;&#1075;&#1088;&#1099;&#1096;&#1091;, &#1087;&#1088;&#1077;&#1078;&#1076;&#1077;
+						&#1095;&#1077;&#1084; &#1074;&#1099;&#1074;&#1077;&#1089;&#1090;&#1080;
+						&#1074;&#1099;&#1080;&#1075;&#1088;&#1099;&#1096;.</p>
+					<h2><span id="i-5">&#1058;&#1091;&#1088;&#1085;&#1080;&#1088;&#1099; &#1074;
+							&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1048;&#1082;&#1089;</span></h2>
+					<p>&#1050;&#1083;&#1091;&#1073; &#1087;&#1088;&#1086;&#1074;&#1086;&#1076;&#1080;&#1090;
+						&#1088;&#1077;&#1075;&#1091;&#1083;&#1103;&#1088;&#1085;&#1099;&#1077;
+						&#1090;&#1091;&#1088;&#1085;&#1080;&#1088;&#1099; &#1076;&#1083;&#1103; &#1089;&#1074;&#1086;&#1080;&#1093;
+						&#1080;&#1075;&#1088;&#1086;&#1082;&#1086;&#1074;, &#1075;&#1076;&#1077; &#1084;&#1086;&#1078;&#1085;&#1086;
+						&#1074;&#1099;&#1080;&#1075;&#1088;&#1072;&#1090;&#1100;
+						&#1076;&#1086;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1077;
+						&#1087;&#1088;&#1080;&#1079;&#1099; &#1080; &#1087;&#1086;&#1076;&#1085;&#1103;&#1090;&#1100;
+						&#1089;&#1074;&#1086;&#1081; &#1091;&#1088;&#1086;&#1074;&#1077;&#1085;&#1100; &#1074;
+						&#1080;&#1075;&#1088;&#1077;.</p>
+					<p>&#1063;&#1090;&#1086;&#1073;&#1099;
+						&#1091;&#1095;&#1072;&#1089;&#1090;&#1074;&#1086;&#1074;&#1072;&#1090;&#1100; &#1074;
+						&#1090;&#1091;&#1088;&#1085;&#1080;&#1088;&#1072;&#1093;,
+						&#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086;
+						&#1079;&#1072;&#1088;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1080;&#1088;&#1086;&#1074;&#1072;&#1090;&#1100;&#1089;&#1103;
+						&#1085;&#1072; &#1089;&#1072;&#1081;&#1090;&#1077; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086;
+						&#1048;&#1082;&#1089; &#1080; &#1074;&#1099;&#1073;&#1088;&#1072;&#1090;&#1100;
+						&#1080;&#1085;&#1090;&#1077;&#1088;&#1077;&#1089;&#1091;&#1102;&#1097;&#1080;&#1081; &#1074;&#1072;&#1089;
+						&#1090;&#1091;&#1088;&#1085;&#1080;&#1088;. &#1054;&#1073;&#1099;&#1095;&#1085;&#1086;, &#1085;&#1072;
+						&#1089;&#1072;&#1081;&#1090;&#1077; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1048;&#1082;&#1089;
+						&#1091;&#1082;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1090;&#1089;&#1103;
+						&#1080;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1103; &#1086; &#1076;&#1072;&#1090;&#1077;
+						&#1080; &#1074;&#1088;&#1077;&#1084;&#1077;&#1085;&#1080;
+						&#1087;&#1088;&#1086;&#1074;&#1077;&#1076;&#1077;&#1085;&#1080;&#1103;
+						&#1090;&#1091;&#1088;&#1085;&#1080;&#1088;&#1072;, &#1087;&#1088;&#1072;&#1074;&#1080;&#1083;&#1072;&#1093;
+						&#1091;&#1095;&#1072;&#1089;&#1090;&#1080;&#1103; &#1080;
+						&#1074;&#1086;&#1079;&#1084;&#1086;&#1078;&#1085;&#1099;&#1093; &#1087;&#1088;&#1080;&#1079;&#1072;&#1093;.
+					</p>
+					<p>&#1058;&#1091;&#1088;&#1085;&#1080;&#1088;&#1099; &#1074; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086;
+						&#1061; &#1084;&#1086;&#1075;&#1091;&#1090; &#1073;&#1099;&#1090;&#1100;
+						&#1087;&#1086;&#1089;&#1074;&#1103;&#1097;&#1077;&#1085;&#1099;
+						&#1086;&#1087;&#1088;&#1077;&#1076;&#1077;&#1083;&#1077;&#1085;&#1085;&#1099;&#1084;
+						&#1080;&#1075;&#1088;&#1086;&#1074;&#1099;&#1084;
+						&#1072;&#1074;&#1090;&#1086;&#1084;&#1072;&#1090;&#1072;&#1084; &#1080;&#1083;&#1080;
+						&#1082;&#1072;&#1090;&#1077;&#1075;&#1086;&#1088;&#1080;&#1103;&#1084; &#1080;&#1075;&#1088;.
+						&#1054;&#1073;&#1099;&#1095;&#1085;&#1086;, &#1091;&#1095;&#1072;&#1089;&#1090;&#1085;&#1080;&#1082;&#1080;
+						&#1090;&#1091;&#1088;&#1085;&#1080;&#1088;&#1086;&#1074;
+						&#1089;&#1086;&#1088;&#1077;&#1074;&#1085;&#1091;&#1102;&#1090;&#1089;&#1103;
+						&#1084;&#1077;&#1078;&#1076;&#1091; &#1089;&#1086;&#1073;&#1086;&#1081; &#1079;&#1072;
+						&#1087;&#1088;&#1080;&#1079;&#1086;&#1074;&#1099;&#1077; &#1084;&#1077;&#1089;&#1090;&#1072;,
+						&#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077; &#1084;&#1086;&#1075;&#1091;&#1090;
+						&#1073;&#1099;&#1090;&#1100; &#1082;&#1072;&#1082;
+						&#1092;&#1080;&#1085;&#1072;&#1085;&#1089;&#1086;&#1074;&#1099;&#1084;&#1080;, &#1090;&#1072;&#1082; &#1080;
+						&#1084;&#1072;&#1090;&#1077;&#1088;&#1080;&#1072;&#1083;&#1100;&#1085;&#1099;&#1084;&#1080;
+						(&#1085;&#1072;&#1087;&#1088;&#1080;&#1084;&#1077;&#1088;,
+						&#1075;&#1072;&#1076;&#1078;&#1077;&#1090;&#1099;, &#1090;&#1077;&#1093;&#1085;&#1080;&#1082;&#1072;
+						&#1080;&#1083;&#1080; &#1073;&#1086;&#1085;&#1091;&#1089;&#1085;&#1099;&#1077;
+						&#1073;&#1072;&#1083;&#1083;&#1099;).</p>
+					<h3><span id="i-6">&#1040;&#1085;&#1086;&#1085;&#1089;&#1099;
+							&#1073;&#1083;&#1080;&#1078;&#1072;&#1081;&#1096;&#1080;&#1093;
+							&#1090;&#1091;&#1088;&#1085;&#1080;&#1088;&#1086;&#1074;</span></h3>
+					<div class="table-wrapper">
+						<table>
+							<tbody>
+								<tr>
+									<th>&#127942; &#1058;&#1091;&#1088;&#1085;&#1080;&#1088;
+										(&#1085;&#1072;&#1079;&#1074;&#1072;&#1085;&#1080;&#1077;)</th>
+									<th>&#128176; &#1055;&#1088;&#1080;&#1079;&#1086;&#1074;&#1086;&#1081; &#1092;&#1086;&#1085;&#1076;
+									</th>
+									<th>&#127920; &#1050;&#1086;&#1083;-&#1074;&#1086;
+										&#1087;&#1088;&#1080;&#1079;&#1086;&#1074;&#1099;&#1093; &#1084;&#1077;&#1089;&#1090;</th>
+									<th>&#128197; &#1044;&#1072;&#1090;&#1099;</th>
+									<th>&#129351; &#1055;&#1088;&#1080;&#1079; &#1079;&#1072; 1-&#1077;
+										&#1084;&#1077;&#1089;&#1090;&#1086;</th>
+								</tr>
+								<tr>
+									<td>&#127942; &#1055;&#1088;&#1080;&#1074;&#1072;&#1090;&#1085;&#1099;&#1081;
+										&#1082;&#1083;&#1091;&#1073;</td>
+									<td>379842 &#1088;&#1091;&#1073;.</td>
+									<td>100</td>
+									<td>1-15 &#1072;&#1087;&#1088;&#1077;&#1083;&#1103;</td>
+									<td>100000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+								</tr>
+								<tr>
+									<td>&#127942; &#1044;&#1080;&#1082;&#1080;&#1081; &#1047;&#1072;&#1087;&#1072;&#1076;</td>
+									<td>&#1055;&#1088;&#1086;&#1075;&#1088;&#1077;&#1089;&#1089;&#1080;&#1074;&#1085;&#1099;&#1081;</td>
+									<td>50</td>
+									<td>1 &#1072;&#1087;&#1088;&#1077;&#1083;&#1103; &mdash; 20 &#1084;&#1072;&#1103;</td>
+									<td>&#1044;&#1086; 150000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+								</tr>
+								<tr>
+									<td>&#127942; &#1053;&#1077;&#1076;&#1077;&#1083;&#1100;&#1085;&#1099;&#1081;
+										&#1058;&#1091;&#1088;&#1085;&#1080;&#1088;</td>
+									<td>400 000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>30</td>
+									<td>1-10 &#1072;&#1087;&#1088;&#1077;&#1083;&#1103;</td>
+									<td>80000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+								</tr>
+								<tr>
+									<td>&#127942; &#1056;&#1091;&#1083;&#1077;&#1090;&#1086;&#1095;&#1085;&#1099;&#1081;
+										&#1058;&#1091;&#1088;&#1085;&#1080;&#1088;</td>
+									<td>595 000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>75</td>
+									<td>10-25 &#1072;&#1087;&#1088;&#1077;&#1083;&#1103;</td>
+									<td>70000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+								</tr>
+								<tr>
+									<td>&#127942; &#1058;&#1091;&#1088;&#1085;&#1080;&#1088; &#1087;&#1086;
+										&#1074;&#1080;&#1076;&#1077;&#1086;&#1087;&#1086;&#1082;&#1077;&#1088;&#1091;</td>
+									<td>500000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>20</td>
+									<td>1-5 &#1084;&#1072;&#1103;</td>
+									<td>50 000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+								</tr>
+								<tr>
+									<td>&#127942; &#1041;&#1083;&#1080;&#1094;-&#1090;&#1091;&#1088;&#1085;&#1080;&#1088;</td>
+									<td>1000000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>10</td>
+									<td>10-15 &#1080;&#1102;&#1085;&#1103;</td>
+									<td>100 000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+								</tr>
+								<tr>
+									<td>&#127942; &#1058;&#1091;&#1088;&#1085;&#1080;&#1088; &#1087;&#1086;
+										&#1073;&#1072;&#1082;&#1082;&#1072;&#1088;&#1077;</td>
+									<td>500000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>40</td>
+									<td>1-10 &#1080;&#1102;&#1083;&#1103;</td>
+									<td>150 000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+								</tr>
+								<tr>
+									<td>&#127942; &#1051;&#1077;&#1090;&#1085;&#1080;&#1081;
+										&#1075;&#1088;&#1072;&#1085;&#1076;-&#1090;&#1091;&#1088;&#1085;&#1080;&#1088;</td>
+									<td>3000000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>200</td>
+									<td>1-31 &#1072;&#1074;&#1075;&#1091;&#1089;&#1090;&#1072;</td>
+									<td>1000000 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h2><span id="_Casino_X_8212">&#1052;&#1086;&#1073;&#1080;&#1083;&#1100;&#1085;&#1072;&#1103;
+							&#1074;&#1077;&#1088;&#1089;&#1080;&#1103; Casino X &mdash; &#1082;&#1072;&#1082;
+							&#1089;&#1082;&#1072;&#1095;&#1072;&#1090;&#1100;
+							&#1087;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1077;</span></h2>
+					<p>&#1050;&#1072;&#1079;&#1080;&#1085;&#1086; X
+						&#1087;&#1088;&#1077;&#1076;&#1086;&#1089;&#1090;&#1072;&#1074;&#1083;&#1103;&#1077;&#1090;
+						&#1084;&#1086;&#1073;&#1080;&#1083;&#1100;&#1085;&#1091;&#1102; &#1074;&#1077;&#1088;&#1089;&#1080;&#1102;
+						&#1089;&#1074;&#1086;&#1077;&#1075;&#1086; &#1089;&#1072;&#1081;&#1090;&#1072;,
+						&#1082;&#1086;&#1090;&#1086;&#1088;&#1072;&#1103;
+						&#1086;&#1087;&#1090;&#1080;&#1084;&#1080;&#1079;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1072;
+						&#1076;&#1083;&#1103; &#1088;&#1072;&#1073;&#1086;&#1090;&#1099; &#1085;&#1072;
+						&#1084;&#1086;&#1073;&#1080;&#1083;&#1100;&#1085;&#1099;&#1093;
+						&#1091;&#1089;&#1090;&#1088;&#1086;&#1081;&#1089;&#1090;&#1074;&#1072;&#1093;. &#1044;&#1083;&#1103;
+						&#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1072; &#1082;
+						&#1084;&#1086;&#1073;&#1080;&#1083;&#1100;&#1085;&#1086;&#1081; &#1074;&#1077;&#1088;&#1089;&#1080;&#1080;
+						&#1085;&#1077; &#1090;&#1088;&#1077;&#1073;&#1091;&#1077;&#1090;&#1089;&#1103;
+						&#1089;&#1082;&#1072;&#1095;&#1080;&#1074;&#1072;&#1085;&#1080;&#1077;
+						&#1076;&#1086;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1075;&#1086;
+						&#1087;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103;. &#1063;&#1090;&#1086;&#1073;&#1099;
+						&#1085;&#1072;&#1095;&#1072;&#1090;&#1100; &#1080;&#1075;&#1088;&#1072;&#1090;&#1100; &#1074;
+						&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; X &#1085;&#1072;
+						&#1084;&#1086;&#1073;&#1080;&#1083;&#1100;&#1085;&#1086;&#1084;
+						&#1091;&#1089;&#1090;&#1088;&#1086;&#1081;&#1089;&#1090;&#1074;&#1077;,
+						&#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086;
+						&#1086;&#1090;&#1082;&#1088;&#1099;&#1090;&#1100; &#1089;&#1072;&#1081;&#1090;
+						&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1074; &#1083;&#1102;&#1073;&#1086;&#1084;
+						&#1084;&#1086;&#1073;&#1080;&#1083;&#1100;&#1085;&#1086;&#1084;
+						&#1073;&#1088;&#1072;&#1091;&#1079;&#1077;&#1088;&#1077;. &#1057;&#1072;&#1081;&#1090;
+						&#1073;&#1091;&#1076;&#1077;&#1090;
+						&#1072;&#1074;&#1090;&#1086;&#1084;&#1072;&#1090;&#1080;&#1095;&#1077;&#1089;&#1082;&#1080;
+						&#1072;&#1076;&#1072;&#1087;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1090;&#1100;&#1089;&#1103;
+						&#1076;&#1083;&#1103; &#1074;&#1072;&#1096;&#1077;&#1075;&#1086;
+						&#1091;&#1089;&#1090;&#1088;&#1086;&#1081;&#1089;&#1090;&#1074;&#1072;, &#1080; &#1074;&#1099;
+						&#1089;&#1084;&#1086;&#1078;&#1077;&#1090;&#1077;
+						&#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1100; &#1074;&#1089;&#1077;
+						&#1092;&#1091;&#1085;&#1082;&#1094;&#1080;&#1080;, &#1082;&#1086;&#1090;&#1086;&#1088;&#1099;&#1077;
+						&#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099; &#1085;&#1072;
+						&#1076;&#1077;&#1089;&#1082;&#1090;&#1086;&#1087;&#1085;&#1086;&#1081;
+						&#1074;&#1077;&#1088;&#1089;&#1080;&#1080;.</p>
+					<p>&#1058;&#1072;&#1082;&#1078;&#1077;, &#1085;&#1072; &#1089;&#1072;&#1081;&#1090;&#1077; Casino X
+						&#1084;&#1086;&#1078;&#1085;&#1086; &#1085;&#1072;&#1081;&#1090;&#1080;
+						&#1089;&#1089;&#1099;&#1083;&#1082;&#1080; &#1085;&#1072;
+						&#1089;&#1082;&#1072;&#1095;&#1080;&#1074;&#1072;&#1085;&#1080;&#1077;
+						&#1084;&#1086;&#1073;&#1080;&#1083;&#1100;&#1085;&#1099;&#1093;
+						&#1087;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1081; &#1076;&#1083;&#1103; Android &#1080;
+						iOS. &#1044;&#1083;&#1103; &#1089;&#1082;&#1072;&#1095;&#1080;&#1074;&#1072;&#1085;&#1080;&#1103; &#1080;
+						&#1091;&#1089;&#1090;&#1072;&#1085;&#1086;&#1074;&#1082;&#1080;
+						&#1087;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103;
+						&#1089;&#1083;&#1077;&#1076;&#1091;&#1081;&#1090;&#1077;
+						&#1080;&#1085;&#1089;&#1090;&#1088;&#1091;&#1082;&#1094;&#1080;&#1103;&#1084; &#1085;&#1072;
+						&#1089;&#1090;&#1088;&#1072;&#1085;&#1080;&#1094;&#1077;
+						&#1079;&#1072;&#1075;&#1088;&#1091;&#1079;&#1082;&#1080;. &#1055;&#1086;&#1089;&#1083;&#1077;
+						&#1091;&#1089;&#1090;&#1072;&#1085;&#1086;&#1074;&#1082;&#1080;
+						&#1087;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1103; &#1085;&#1072;
+						&#1074;&#1072;&#1096;&#1077;&#1084; &#1084;&#1086;&#1073;&#1080;&#1083;&#1100;&#1085;&#1086;&#1084;
+						&#1091;&#1089;&#1090;&#1088;&#1086;&#1081;&#1089;&#1090;&#1074;&#1077;, &#1074;&#1099;
+						&#1089;&#1084;&#1086;&#1078;&#1077;&#1090;&#1077; &#1083;&#1077;&#1075;&#1082;&#1086; &#1080;
+						&#1073;&#1099;&#1089;&#1090;&#1088;&#1086; &#1074;&#1093;&#1086;&#1076;&#1080;&#1090;&#1100; &#1074;
+						&#1089;&#1074;&#1086;&#1081; &#1072;&#1082;&#1082;&#1072;&#1091;&#1085;&#1090;,
+						&#1087;&#1086;&#1087;&#1086;&#1083;&#1085;&#1103;&#1090;&#1100; &#1089;&#1095;&#1077;&#1090;,
+						&#1076;&#1077;&#1083;&#1072;&#1090;&#1100; &#1089;&#1090;&#1072;&#1074;&#1082;&#1080; &#1080;
+						&#1074;&#1099;&#1074;&#1086;&#1076;&#1080;&#1090;&#1100;
+						&#1074;&#1099;&#1080;&#1075;&#1088;&#1099;&#1096;&#1080;.</p>
+					<h2><span id="i-7">&#1055;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1072;
+							&#1083;&#1086;&#1103;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080;
+							(&#1089;&#1090;&#1072;&#1090;&#1091;&#1089;&#1099; &#1080;&#1075;&#1088;&#1086;&#1082;&#1086;&#1074;)
+							&#1074; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;</span></h2>
+					<p>&#1048;&#1075;&#1088;&#1086;&#1074;&#1086;&#1081; &#1082;&#1083;&#1091;&#1073; &#1048;&#1082;&#1089;
+						&#1050;&#1072;&#1079;&#1080;&#1085;&#1086;
+						&#1087;&#1088;&#1077;&#1076;&#1083;&#1072;&#1075;&#1072;&#1077;&#1090;
+						&#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1091;
+						&#1083;&#1086;&#1103;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080; &#1076;&#1083;&#1103;
+						&#1089;&#1074;&#1086;&#1080;&#1093; &#1080;&#1075;&#1088;&#1086;&#1082;&#1086;&#1074;,
+						&#1082;&#1086;&#1090;&#1086;&#1088;&#1072;&#1103;
+						&#1087;&#1086;&#1079;&#1074;&#1086;&#1083;&#1103;&#1077;&#1090;
+						&#1087;&#1086;&#1083;&#1091;&#1095;&#1072;&#1090;&#1100;
+						&#1076;&#1086;&#1087;&#1086;&#1083;&#1085;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1099;&#1077;
+						&#1073;&#1086;&#1085;&#1091;&#1089;&#1099; &#1080;
+						&#1087;&#1088;&#1080;&#1074;&#1080;&#1083;&#1077;&#1075;&#1080;&#1080; &#1074;
+						&#1079;&#1072;&#1074;&#1080;&#1089;&#1080;&#1084;&#1086;&#1089;&#1090;&#1080; &#1086;&#1090;
+						&#1091;&#1088;&#1086;&#1074;&#1085;&#1103; &#1080;&#1075;&#1088;&#1086;&#1082;&#1072;. &#1063;&#1077;&#1084;
+						&#1074;&#1099;&#1096;&#1077; &#1091;&#1088;&#1086;&#1074;&#1077;&#1085;&#1100;, &#1090;&#1077;&#1084;
+						&#1073;&#1086;&#1083;&#1100;&#1096;&#1077; &#1073;&#1086;&#1085;&#1091;&#1089;&#1086;&#1074; &#1080;
+						&#1074;&#1086;&#1079;&#1084;&#1086;&#1078;&#1085;&#1086;&#1089;&#1090;&#1077;&#1081;
+						&#1089;&#1090;&#1072;&#1085;&#1086;&#1074;&#1103;&#1090;&#1089;&#1103;
+						&#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;&#1084;&#1080;. &#1042;
+						&#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061; &#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1099;
+						&#1095;&#1077;&#1090;&#1099;&#1088;&#1077; &#1091;&#1088;&#1086;&#1074;&#1085;&#1103;
+						&#1089;&#1090;&#1072;&#1090;&#1091;&#1089;&#1086;&#1074; &#1080;&#1075;&#1088;&#1086;&#1082;&#1086;&#1074;:
+						&#1041;&#1088;&#1086;&#1085;&#1079;&#1086;&#1074;&#1099;&#1081;,
+						&#1057;&#1077;&#1088;&#1077;&#1073;&#1088;&#1103;&#1085;&#1099;&#1081;,
+						&#1047;&#1086;&#1083;&#1086;&#1090;&#1086;&#1081; &#1080;
+						&#1055;&#1083;&#1072;&#1090;&#1080;&#1085;&#1086;&#1074;&#1099;&#1081;.
+						&#1050;&#1072;&#1078;&#1076;&#1099;&#1081; &#1091;&#1088;&#1086;&#1074;&#1077;&#1085;&#1100;
+						&#1089;&#1086;&#1086;&#1090;&#1074;&#1077;&#1090;&#1089;&#1090;&#1074;&#1091;&#1077;&#1090;
+						&#1086;&#1087;&#1088;&#1077;&#1076;&#1077;&#1083;&#1077;&#1085;&#1085;&#1086;&#1084;&#1091;
+						&#1082;&#1086;&#1083;&#1080;&#1095;&#1077;&#1089;&#1090;&#1074;&#1091;
+						&#1085;&#1072;&#1073;&#1088;&#1072;&#1085;&#1085;&#1099;&#1093;
+						&#1073;&#1086;&#1085;&#1091;&#1089;&#1085;&#1099;&#1093; &#1073;&#1072;&#1083;&#1083;&#1086;&#1074;.</p>
+					<h3><span id="i-8">&#1042;&#1089;&#1077; &#1089;&#1090;&#1072;&#1090;&#1091;&#1089;&#1099;</span></h3>
+					<div class="table-wrapper">
+						<table>
+							<tbody>
+								<tr>
+									<th>&#127942; &#1057;&#1090;&#1072;&#1090;&#1091;&#1089; &#1080;&#1075;&#1088;&#1086;&#1082;&#1072;
+									</th>
+									<th>&#127920; &#1057;&#1091;&#1084;&#1084;&#1072; &#1089;&#1090;&#1072;&#1074;&#1086;&#1082;
+										&#1079;&#1072; &#1084;&#1077;&#1089;&#1103;&#1094;</th>
+									<th>&#128176; &#1042;&#1099;&#1087;&#1083;&#1072;&#1090;&#1099; &#1074; &#1076;&#1077;&#1085;&#1100;
+									</th>
+									<th>&#128176;&#128176; &#1042;&#1099;&#1087;&#1083;&#1072;&#1090;&#1099; &#1074;
+										&#1084;&#1077;&#1089;&#1103;&#1094;</th>
+									<th>&#128260; &#1050;&#1077;&#1096;&#1073;&#1077;&#1082;</th>
+								</tr>
+								<tr>
+									<td>&#129351; Novate</td>
+									<td>0-49 999 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>50 000 &#1088;&#1091;&#1073;.</td>
+									<td>1 500 000 &#1088;&#1091;&#1073;.</td>
+									<td>0%</td>
+								</tr>
+								<tr>
+									<td>&#129351; Regular</td>
+									<td>50 000-199 999 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>75 000 &#1088;&#1091;&#1073;.</td>
+									<td>2 250 000 &#1088;&#1091;&#1073;.</td>
+									<td>5%</td>
+								</tr>
+								<tr>
+									<td>&#129351; Bronze</td>
+									<td>200 000-499 999 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>100 000 &#1088;&#1091;&#1073;.</td>
+									<td>3 000 000 &#1088;&#1091;&#1073;.</td>
+									<td>7%</td>
+								</tr>
+								<tr>
+									<td>&#129351; Silver</td>
+									<td>500 000-999 999 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>150 000 &#1088;&#1091;&#1073;.</td>
+									<td>4 500 000 &#1088;&#1091;&#1073;.</td>
+									<td>10%</td>
+								</tr>
+								<tr>
+									<td>&#129351; Gold</td>
+									<td>1 000 000-2 499 999 &#1088;&#1091;&#1073;&#1083;&#1077;&#1081;</td>
+									<td>200 000 &#1088;&#1091;&#1073;.</td>
+									<td>6 000 000 &#1088;&#1091;&#1073;.</td>
+									<td>12%</td>
+								</tr>
+								<tr>
+									<td>&#129297; Platinum</td>
+									<td>2 500 000 &#1088;&#1091;&#1073;. &#1080; &#1074;&#1099;&#1096;&#1077;</td>
+									<td>300 000 &#1088;&#1091;&#1073;.</td>
+									<td>9 000 000 &#1088;&#1091;&#1073;.</td>
+									<td>15%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p>&#1044;&#1083;&#1103; &#1087;&#1086;&#1083;&#1091;&#1095;&#1077;&#1085;&#1080;&#1103;
+						&#1073;&#1086;&#1085;&#1091;&#1089;&#1085;&#1099;&#1093; &#1073;&#1072;&#1083;&#1083;&#1086;&#1074;
+						&#1080;&#1075;&#1088;&#1086;&#1082;&#1072;&#1084;
+						&#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086;
+						&#1076;&#1077;&#1083;&#1072;&#1090;&#1100; &#1089;&#1090;&#1072;&#1074;&#1082;&#1080; &#1085;&#1072;
+						&#1088;&#1077;&#1072;&#1083;&#1100;&#1085;&#1099;&#1077; &#1076;&#1077;&#1085;&#1100;&#1075;&#1080; &#1074;
+						&#1080;&#1075;&#1088;&#1086;&#1074;&#1099;&#1093;
+						&#1072;&#1074;&#1090;&#1086;&#1084;&#1072;&#1090;&#1072;&#1093; &#1080;
+						&#1076;&#1088;&#1091;&#1075;&#1080;&#1093; &#1080;&#1075;&#1088;&#1072;&#1093; &#1085;&#1072;
+						&#1089;&#1072;&#1081;&#1090;&#1077; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;.
+						&#1063;&#1077;&#1084; &#1073;&#1086;&#1083;&#1100;&#1096;&#1077; &#1089;&#1090;&#1072;&#1074;&#1086;&#1082;,
+						&#1090;&#1077;&#1084; &#1073;&#1086;&#1083;&#1100;&#1096;&#1077;
+						&#1073;&#1086;&#1085;&#1091;&#1089;&#1085;&#1099;&#1093; &#1073;&#1072;&#1083;&#1083;&#1086;&#1074;
+						&#1084;&#1086;&#1078;&#1085;&#1086; &#1085;&#1072;&#1073;&#1088;&#1072;&#1090;&#1100;.</p>
+					<p>&#1041;&#1086;&#1085;&#1091;&#1089;&#1085;&#1099;&#1077; &#1073;&#1072;&#1083;&#1083;&#1099;
+						&#1084;&#1086;&#1078;&#1085;&#1086; &#1086;&#1073;&#1084;&#1077;&#1085;&#1103;&#1090;&#1100; &#1085;&#1072;
+						&#1073;&#1086;&#1085;&#1091;&#1089;&#1085;&#1099;&#1077; &#1076;&#1077;&#1085;&#1100;&#1075;&#1080;
+						&#1080;&#1083;&#1080; &#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1100;
+						&#1076;&#1083;&#1103; &#1091;&#1074;&#1077;&#1083;&#1080;&#1095;&#1077;&#1085;&#1080;&#1103;
+						&#1091;&#1088;&#1086;&#1074;&#1085;&#1103; &#1089;&#1090;&#1072;&#1090;&#1091;&#1089;&#1072;
+						&#1080;&#1075;&#1088;&#1086;&#1082;&#1072;. &#1050;&#1088;&#1086;&#1084;&#1077;
+						&#1090;&#1086;&#1075;&#1086;, &#1080;&#1075;&#1088;&#1086;&#1082;&#1080; &#1089;
+						&#1074;&#1099;&#1089;&#1086;&#1082;&#1080;&#1084; &#1091;&#1088;&#1086;&#1074;&#1085;&#1077;&#1084;
+						&#1089;&#1090;&#1072;&#1090;&#1091;&#1089;&#1072; &#1084;&#1086;&#1075;&#1091;&#1090;
+						&#1087;&#1086;&#1083;&#1091;&#1095;&#1072;&#1090;&#1100;
+						&#1087;&#1077;&#1088;&#1089;&#1086;&#1085;&#1072;&#1083;&#1100;&#1085;&#1099;&#1077;
+						&#1073;&#1086;&#1085;&#1091;&#1089;&#1099;,
+						&#1091;&#1095;&#1072;&#1089;&#1090;&#1074;&#1086;&#1074;&#1072;&#1090;&#1100; &#1074;
+						&#1101;&#1082;&#1089;&#1082;&#1083;&#1102;&#1079;&#1080;&#1074;&#1085;&#1099;&#1093;
+						&#1090;&#1091;&#1088;&#1085;&#1080;&#1088;&#1072;&#1093; &#1080; &#1080;&#1084;&#1077;&#1090;&#1100;
+						&#1076;&#1086;&#1089;&#1090;&#1091;&#1087; &#1082;
+						&#1087;&#1088;&#1080;&#1074;&#1080;&#1083;&#1077;&#1075;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1085;&#1099;&#1084;
+						&#1091;&#1089;&#1083;&#1091;&#1075;&#1072;&#1084;. &#1063;&#1090;&#1086;&#1073;&#1099;
+						&#1086;&#1090;&#1089;&#1083;&#1077;&#1078;&#1080;&#1074;&#1072;&#1090;&#1100; &#1089;&#1074;&#1086;&#1081;
+						&#1087;&#1088;&#1086;&#1075;&#1088;&#1077;&#1089;&#1089; &#1074;
+						&#1087;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1077;
+						&#1083;&#1086;&#1103;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080; &#1080;
+						&#1091;&#1079;&#1085;&#1072;&#1090;&#1100; &#1073;&#1086;&#1083;&#1077;&#1077;
+						&#1087;&#1086;&#1076;&#1088;&#1086;&#1073;&#1085;&#1091;&#1102;
+						&#1080;&#1085;&#1092;&#1086;&#1088;&#1084;&#1072;&#1094;&#1080;&#1102; &#1086;
+						&#1073;&#1086;&#1085;&#1091;&#1089;&#1072;&#1093; &#1080;
+						&#1087;&#1088;&#1080;&#1074;&#1080;&#1083;&#1077;&#1075;&#1080;&#1103;&#1093;,
+						&#1085;&#1077;&#1086;&#1073;&#1093;&#1086;&#1076;&#1080;&#1084;&#1086; &#1079;&#1072;&#1081;&#1090;&#1080;
+						&#1085;&#1072; &#1089;&#1090;&#1088;&#1072;&#1085;&#1080;&#1094;&#1091;
+						&laquo;&#1055;&#1088;&#1086;&#1075;&#1088;&#1072;&#1084;&#1084;&#1072;
+						&#1083;&#1086;&#1103;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080;&raquo; &#1085;&#1072;
+						&#1089;&#1072;&#1081;&#1090;&#1077; &#1082;&#1072;&#1079;&#1080;&#1085;&#1086; &#1061;.</p>
+				</div>
+			</article>
+		</div>
+	</section>
+	<div class="des_cont_m" itemscope itemtype="http://schema.org/FAQPage">
+		<div class="container">
+			<h2 id="10" class="yakmarg">❓ FAQ - Часто задаваемые вопросы</h2>
+			<div class="block_ques">
+				<h3 itemprop="mainEntity" itemscope itemtype="http://schema.org/Question"><span itemprop="name">Как начать игру
+						в Casino
+						X?</span></h3>
+				<div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer">
+					<p style="text-align: justify;" itemprop="text">Прежде всего необходимо решить вопрос как играть - на деньги
+						или бесплатно.
+						Бесплатный режим игры позволяет играть без регистрации, но не предусматривает вывод средств, в то время как
+						режим игры на деньги наоборот - позволит играть полноценно и получать реальные выигрыши. Регистрация в этом
+						случае обязательна.</p>
+				</div>
+			</div>
+			<div class="block_ques">
+				<h3 itemprop="mainEntity" itemscope itemtype="http://schema.org/Question"><span itemprop="name">Как пополнить
+						счет в
+						казино?</span></h3>
+				<div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer">
+					<p style="text-align: justify;" itemprop="text">Любым удобным способом. На сайте имеются практически все
+						способы пополнения
+						личного счета, в том числе и с мобильного телефона.</p>
+				</div>
+			</div>
+			<div class="block_ques">
+				<h3 itemprop="mainEntity" itemscope itemtype="http://schema.org/Question"><span itemprop="name">Существует ли
+						рабочее зеркало
+						казино</span></h3>
+				<div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer">
+					<p style="text-align: justify;" itemprop="text">Да. По наличию рабочего зеркала необходимо связаться с нашей
+						службой поддержки
+					</p>
+				</div>
+			</div>
+			<div class="block_ques">
+				<h3 itemprop="mainEntity" itemscope itemtype="http://schema.org/Question"><span itemprop="name">Имеются ли
+						подкрутки в аппаратах
+						казино?</span></h3>
+				<div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer">
+					<p style="text-align: justify;" itemprop="text">Продукты Casino X не имеют подкруток, поскольку весь игровой
+						процесс
+						осуществляется на стороне провайдера, у казино нет доступа к этим данным.</p>
+				</div>
+			</div>
+			<div class="block_ques">
+				<h3 itemprop="mainEntity" itemscope itemtype="http://schema.org/Question"><span itemprop="name">Какие провайдеры
+						есть в
+						казино?</span></h3>
+				<div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer">
+					<p style="text-align: justify;" itemprop="text">Casino X сотрудничает с большим количеством разрабочиков,
+						включая такие
+						известные
+						бренды как Microgaming, Netent, Quickspin, Playtech, Yggdrasil.</p>
+				</div>
+			</div>
+			<div class="block_ques">
+				<h3 itemprop="mainEntity" itemscope itemtype="http://schema.org/Question"><span itemprop="name">Как обойти
+						блокировку
+						казино?</span></h3>
+				<div itemscope itemprop="acceptedAnswer" itemtype="http://schema.org/Answer">
+					<p style="text-align: justify;" itemprop="text">Самый простой способ - использовать зеркало. Альтернативные
+						варианты: скачать
+						приложение Casino X на ПК или телефон, использовать VPN.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="des_cont_m reviews">
+		<div class="container">
+			<h2 id="10" class="yakmarg">Отзывы 2023</h2>
+			<div class="block_ques" itemscope itemtype="https://schema.org/Review">
+				<h3 itemprop="name">Алекс</h3>
+				<p itemprop="reviewBody">Играю не только ради удовольствия, получается снимать и прибыль. Для тех, кто хочет как
+					я, рекомендую
+					регистрироваться</p>
+			</div>
+			<div class="block_ques" itemscope itemtype="https://schema.org/Review">
+				<h3 itemprop="name">Нестор</h3>
+				<p itemprop="reviewBody">Лайвы меня привлекают больше чем симуляторы. Я тусуюсь в Свит Бананзе, захожу на
+					рулетку или Драконы и Тигры.
+				</p>
+			</div>
+			<div class="block_ques" itemscope itemtype="https://schema.org/Review">
+				<h3 itemprop="name">Кирилл</h3>
+				<p itemprop="reviewBody">Мне нравятся слоты с котиками, собачками и фруктами. Хочу отметить Dogs' Street. Игра
+					относится к настолкам,
+					и полюбилась за простые правила и хорошие шансы выиграть.</p>
+			</div>
+			<div class="block_ques" itemscope itemtype="https://schema.org/Review">
+				<h3 itemprop="name">Настя</h3>
+				<p itemprop="reviewBody">В казино можно выигрывать и выводить деньги без задержек. Этого достаточно.</p>
+			</div>
+			<div class="block_ques" itemscope itemtype="https://schema.org/Review">
+				<h3 itemprop="name">Лев</h3>
+				<p itemprop="reviewBody">При регистрации обрадовался, что получил 2 бонуса сразу, а после приуныл. Промокодов
+					мало или я что-то делаю
+					не так?</p>
+			</div>
+		</div>
+	</div>
+	<footer class="lgb1-footer">
+		<div class="container">
+			<div class="lgb1-footer__nav">
+			</div>
+			<div class="lgb1-footer__disclaimer">18+ Азартные игры могут вызывать зависимость.</div>
+		</div>
+		<div class="lgb1-footer__copyrights">
+			<div class="container">&copy; Все права защищены 2024</div>
+		</div>
+	</footer>
+	<div class="to_top_btn js-to_top_btn"></div>
+</body>
+
+</html>
